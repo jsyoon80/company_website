@@ -6,8 +6,8 @@ const menuItems = [
   { path: "/", label: "홈" },
   { path: "/about", label: "회사 정보" },
   { path: "/product", label: "제품 소개" },
-  { path: "/board", label: "업무 게시판" },
-  { path: "/our-services", label: "제공 기술" },
+  { path: "/board", label: "공지 사항" },
+  { path: "/our-services", label: "기술 지원" },
   { path: "/contact", label: "문의하기" },
 ];
 
