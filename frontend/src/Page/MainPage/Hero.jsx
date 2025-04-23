@@ -44,7 +44,7 @@ const Hero = () => {
             { number: "100+", label: "설치 완료" },
             { number: "98%", label: "고객 만족도" },
             { number: "1년+", label: "업계 경력" },
-            { number: "100%", label: "기술 지원" },
+            { number: "25/4", label: "기술 지원" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-2xl font-bold text-blue-600">
