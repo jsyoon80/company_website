@@ -31,10 +31,10 @@ const Services = () => {
   return (
     <div className="container mx-auto px-4 py-32 max-w-7xl">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
           우리의 서비스
         </h1>
-        <p className="text-xl text-gray-600">
+        <p className="text-sm sm:text-lg text-gray-600">
           혁신적인 AI기술로 비즈니스의 성공을 지원합니다.
         </p>
       </div>
@@ -46,10 +46,10 @@ const Services = () => {
             className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-2 transition-transform duration-300"
           >
             <div className="text-4xl mb-4">{service.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
               {service.title}
             </h3>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               {service.description}
             </p>
           </div>
@@ -57,15 +57,15 @@ const Services = () => {
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-8">
           왜 우리를 선택해야 할까요?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
               20년+ 경험
             </h3>
-            <p className="text-gray-600">다양한 산업 분야의 프로젝트 경험</p>
+            <p className="text-sm sm:text-base text-gray-600">다양한 산업 분야의 프로젝트 경험</p>
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -83,7 +83,7 @@ const Services = () => {
       </div>
 
       <div className="mt-32">
-        <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-12 text-center">
           프로젝트 진행 프로세스
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -116,18 +116,20 @@ const Services = () => {
               <div className="text-blue-600 text-5xl font-bold mb-4">
                 {item.step}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600">{item.desc}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                {item.title}</h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                {item.desc}</p>
             </div>
           ))}
         </div>
       </div>
 
       <div className="mt-32 bg-blue-600 rounded-2xl p-12 text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
           프로젝트를 시작할 준비가 되셨나요?
         </h2>
-        <p className="text-xl mb-8">
+        <p className="text-base sm:text-lg mb-8">
           전문가와 상담하고 최적의 솔루션을 찾아보세요.
         </p>
         <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
