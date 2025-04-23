@@ -38,8 +38,8 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">연락처</h3>
             <ul className="space-y-2 text-gray-400">
               <li>서울특별시 강남구</li>
-              <li>삼성동 888번지</li>
-              <li>전화: 02-2277-5700</li>
+              <li>테헤란로 79길 6, JS타워</li>
+              <li>전화: 1888-2882</li>
               <li>이메일: info@irda-ai.com</li>
             </ul>
           </div>
