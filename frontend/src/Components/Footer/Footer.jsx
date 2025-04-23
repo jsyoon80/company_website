@@ -27,7 +27,7 @@ const Footer = () => {
         <h3 className='text-xl font-bold mb-4'>바로 가기</h3>
         <ul className='space-y-2'>
         <li><Link to="/" onClick={scrollToTop} className="hover:text-white transition-colors">홈</Link></li>
-        <li><Link to="/about" onClick={scrollToTop} className="hover:text-white transition-colors">회사 정보</Link></li>
+        <li><Link to="/about" onClick={scrollToTop} className="hover:text-white transition-colors">회사 소개</Link></li>
         <li><Link to="/product" onClick={scrollToTop} className="hover:text-white transition-colors">제품 소개</Link></li>
         <li><Link to="/board" onClick={scrollToTop} className="hover:text-white transition-colors">공지 사항</Link></li>
         <li><Link to="/our-services" onClick={scrollToTop} className="hover:text-white transition-colors">기술 지원</Link></li>

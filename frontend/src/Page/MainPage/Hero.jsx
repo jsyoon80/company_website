@@ -54,8 +54,21 @@ const Hero = () => {
             </div>
           ))}
         </div>
+
+        {/* 문구 추가 영역 */}
+        <div className="text-center mt-20">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-extrabold">
+            <span className="text-blue-600">AI</span>{" "}
+            <span className="text-green-600">Vision</span>{" "}
+            <span className="text-red-600">Agents</span>{" "}
+            <span className="text-gray-700">Global</span>{" "}
+            <span className="text-orange-600">Leader</span>
+          </h2>
+        </div>
+
       </div>
     </div>
+
   )
 }
 
