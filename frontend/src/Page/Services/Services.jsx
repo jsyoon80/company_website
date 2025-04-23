@@ -32,7 +32,7 @@ const Services = () => {
     <div className="container mx-auto px-4 py-32 max-w-7xl">
       <div className="text-center mb-12">
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          우리의 서비스
+          우리의 기술서비스
         </h1>
         <p className="text-sm sm:text-lg text-gray-600">
           혁신적인 AI기술로 비즈니스의 성공을 지원합니다.
@@ -95,8 +95,8 @@ const Services = () => {
             },
             {
               step: "02",
-              title: "설계 및 기획",
-              desc: "최적의 솔루션 설계와 개발 계획 수립",
+              title: "기획 및 설계",
+              desc: "최적 솔루션 설계와 개발 계획 수립",
             },
             {
               step: "03",

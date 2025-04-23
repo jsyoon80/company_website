@@ -5,12 +5,12 @@ const Contact = () => {
     <div className="min-h-screen bg-white py-32">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-800 mb-6">
             문의하기
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            AI비전 에이전트 솔루션 개발부터, 설치와 유지보수까지, 전문가와 상담하세요. 24시간 내에
-            답변드리겠습니다.
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            AI비전 에이전트 솔루션 개발부터, 설치와 유지보수까지, 전문가와 상담하세요. 
+            24시간 내에 답변드리겠습니다.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -88,9 +88,6 @@ const Contact = () => {
                     title: "주소",
                     info: "서울특별시 강남구 테헤란로 79길 6, JS타워",
                     desc: "본사",
-
-
-
 
                   },
                 ].map((item, index) => (
