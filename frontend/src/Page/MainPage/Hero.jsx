@@ -41,8 +41,8 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
           {[
-            { number: "100+", label: "설치 완료" },
-            { number: "98%", label: "고객 만족도" },
+            { number: "20+", label: "설치 완료" },
+            { number: "100%", label: "고객 만족도" },
             { number: "1년+", label: "업계 경력" },
             { number: "25/4", label: "기술 지원" },
           ].map((stat, index) => (

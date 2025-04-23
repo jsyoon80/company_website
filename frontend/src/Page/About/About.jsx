@@ -23,12 +23,11 @@ const About = () => {
         </h2>
         <div className="text-base sm:text-lg leading-relaxed text-gray-600 space-y-6">
           <p>
-            iRDA Company는 2025년 1월 설립 이래, AI Vision 카메라 장치 및 제어 시스템 분야에서 
+            iRDA Company는 2025년 1월 설립 이래, AI비전 머신카메라 장치 및 제어 시스템 분야에서 
             혁신적인 솔루션을 제공해온 선도적인 AI 비전 에이전트 기업입니다. 
-            고효율 GPU, TPU, FPGA(임베디드 장치 포함), AI Machine Vision Camera(AMVC), 
-            피지컬 AI 로봇(VLA Robot) 등의 핵심 제품을 개발 및 생산하고 있으며, 
-            LLM 및 Transformer 기반 AI 에이전트를 활용한 이커머스 및 클라우드 시스템 구축에도 
-            적극적으로 앞장서고 있습니다.
+            AI비전 머신카메라(AVMC),피지컬 AI 로봇(VLA Robot),고효율 GPU,TPU,FPGA(임베디드 장치 포함) 
+            등의 핵심 제품을 개발 및 생산하고 있으며, LLM 및 Transformer 기반 AI 에이전트를 활용한 
+            이커머스 및 클라우드 시스템 구축에도 적극적으로 앞장서고 있습니다.
           </p>
           <p>
             특히 <strong className="text-blue-600">AI 머신비전 카메라와 피치컬AI 솔루션 분야</strong>에서는 

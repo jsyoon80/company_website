@@ -33,18 +33,16 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full bg-white text-black p-4 shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* 로고 */}
-        <h1 className="text-xl lg:text-2xl font-bold lg:ml-12 lg:mr-8">
+        <h1 className="text-2xl lg:text-2xl font-bold lg:ml-12 lg:mr-8">
           <Link to="/">
-            <span className="text-blue-500">i</span>
-            <span className="text-green-500">R</span>
-            <span className="text-red-500">D</span>
-            <span className="text-yellow-700">A</span>
-            {/* <span className="text-gray-500">-</span>
-            <span className="text-blue-500">A</span>
-            <span className="text-green-500">I</span> */}
-            <span className="text-black"> Company</span>
+            <span className="text-blue-700 font-bold">i</span>
+            <span className="text-green-500 font-bold">R</span>
+            <span className="text-red-500 font-bold">D</span>
+            <span className="text-yellow-700 font-bold">A</span>
+            <span className="text-black text-base font-normal ml-1">Company</span>
           </Link>
         </h1>
+
 
         {/* 데스크톱 메뉴 */}
         <div className="hidden lg:flex flex-1 justify-center">
