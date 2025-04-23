@@ -75,7 +75,7 @@ const Services = () => {
           </div>
           <div className="bg-gray-50 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              25/4 지원
+              365/24 지원
             </h3>
             <p className="text-gray-600">연중무휴 기술 지원 서비스</p>
           </div>

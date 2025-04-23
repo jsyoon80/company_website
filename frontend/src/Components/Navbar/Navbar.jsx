@@ -6,9 +6,9 @@ const menuItems = [
   { path: "/", label: "홈" },
   { path: "/about", label: "회사 소개" },
   { path: "/product", label: "제품 소개" },
-  { path: "/board", label: "공지 사항" },
   { path: "/our-services", label: "기술 지원" },
   { path: "/contact", label: "사업 문의" },
+  { path: "/board", label: "공지 사항" },
 ];
 
 const MenuItem = ({ path, label, onClick }) => (

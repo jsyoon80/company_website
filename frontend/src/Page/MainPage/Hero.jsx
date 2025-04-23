@@ -44,7 +44,7 @@ const Hero = () => {
             { number: "20+", label: "설치 완료" },
             { number: "100%", label: "고객 만족도" },
             { number: "1년+", label: "업계 경력" },
-            { number: "25/4", label: "기술 지원" },
+            { number: "365/24", label: "기술 지원" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-2xl font-bold text-blue-600">
@@ -62,7 +62,7 @@ const Hero = () => {
             <span className="text-green-600">Vision</span>{" "}
             <span className="text-red-600">Agents</span>{" "}
             <span className="text-gray-700">Global</span>{" "}
-            <span className="text-orange-600">Leader</span>
+            <span className="text-blue-600">Leader</span>
           </h2>
         </div>
 

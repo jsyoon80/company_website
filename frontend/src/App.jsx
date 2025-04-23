@@ -8,8 +8,8 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import MainPage from "./Page/MainPage/MainPage";
 import About from "./Page/About/About";
 import Product from "./Page/Product/Product";
-import Board from "./Page/Board/Board";
 import Services from "./Page/Services/Services";
+import Board from "./Page/Board/Board";
 import Contact from "./Page/Contact/Contact";
 
 function Layout() {
@@ -40,17 +40,18 @@ const router = createBrowserRouter([
         element: <Product />,
       },
       {
-        path: "/board",
-        element: <Board />,
-      },
-      {
         path: "/our-services",
         element: <Services />,
       },
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/board",
+        element: <Board />,
       }
+
     ]
   }
 ])
