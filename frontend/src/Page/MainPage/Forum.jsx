@@ -22,7 +22,7 @@ const Forum = () => {
     {
       _id: 3,
       number: 3,
-      title: "신규고객 공지사항",
+      title: "신규 고객관련 공지사항",
       views: 70,
       fileUrl: ["file2", "file3"],
       createdAt: "2025-02-10",
@@ -30,7 +30,7 @@ const Forum = () => {
     {
       _id: 4,
       number: 4,
-      title: "특허관련 공지사항",
+      title: "네 번째 게시물",
       views: 50,
       fileUrl: [],
       createdAt: "2025-03-15",
@@ -50,7 +50,7 @@ const Forum = () => {
       <div className="container mx-auto px-4 py-28 lg:py-0 max-w-6xl">
         <div className="text-center mb-6">
           <h2 className="text-4xl sm:text-3xl lg:text-5xl font-bold text-gray-900">
-            공지 사항
+            공지사항 게시판
           </h2>
         </div>
 
