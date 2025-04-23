@@ -30,7 +30,7 @@ const Forum = () => {
     {
       _id: 4,
       number: 4,
-      title: "네 번째 게시물",
+      title: "업무제휴관련 공지사항",
       views: 50,
       fileUrl: [],
       createdAt: "2025-03-15",

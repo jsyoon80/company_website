@@ -106,7 +106,7 @@ const Leadership = () => {
           <div className="text-base sm:text-lg text-gray-600 space-y-6">
             <p>안녕하십니까, iRDA 컴파니입니다.</p>
             <p>
-              우리 iRDA Company는 20년 이상의 반도체광학 산업 경력을 바탕으로, 혁신적인
+              우리 iRDA Company는 20년 이상의 반도체 & 광학 산업 경력을 바탕으로, 혁신적인
               AI기술과 서비스를 통해 고객 여러분께 최상의 가치를 제공하기 위해
               노력하고 있습니다.
             </p>

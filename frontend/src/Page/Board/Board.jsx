@@ -29,8 +29,8 @@ const Board = () => {
     {
       _id: 4,
       number: 4,
-      title: "네 번째 게시물",
-      createdAt: "2025-03-15:45:00",
+      title: "업무제휴관련 공지사항",
+      createdAt: "2025-03-15T15:45:00",
       views: 50,
     },
     {
