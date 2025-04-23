@@ -7,7 +7,7 @@ import Product5 from "../../assets/products/bio.jpg";
 import Product6 from "../../assets/products/machineVision.jpg";
 import Product7 from "../../assets/products/gpu.jpg";
 import Product8 from "../../assets/products/VLA.jpg";
-import Product9 from "../../assets/products/ecumerce.jpg";
+import Product9 from "../../assets/products/eCommerce.jpg";
 
 
 const Leadership = () => {
@@ -62,7 +62,7 @@ const Leadership = () => {
     },
     {
       name: "AI 가속기",
-      position: "GPU, TPU, FPGA Devices",
+      position: "GPU, TPU, FPGA, EDGE, Etc",
       description:
       ["▷ AI기반 고성능 프로세싱", 
         "▷ 풍부한 I/O 및 확장성", 
@@ -79,7 +79,7 @@ const Leadership = () => {
       imageUrl: Product8,
     },
     {
-      name: "e-커머스 AI",
+      name: "E-커머스 AI",
       position: "상품추천, 고객응대, 마케팅 자동화",
       description:
       ["▷ AI기반 개인화 마케팅", 

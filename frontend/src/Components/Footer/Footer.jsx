@@ -29,9 +29,9 @@ const Footer = () => {
         <li><Link to="/" onClick={scrollToTop} className="hover:text-white transition-colors">홈</Link></li>
         <li><Link to="/about" onClick={scrollToTop} className="hover:text-white transition-colors">회사 소개</Link></li>
         <li><Link to="/product" onClick={scrollToTop} className="hover:text-white transition-colors">제품 소개</Link></li>
-        <li><Link to="/board" onClick={scrollToTop} className="hover:text-white transition-colors">공지 사항</Link></li>
         <li><Link to="/our-services" onClick={scrollToTop} className="hover:text-white transition-colors">기술 지원</Link></li>
         <li><Link to="/contact" onClick={scrollToTop} className="hover:text-white transition-colors">사업 문의</Link></li>
+        <li><Link to="/board" onClick={scrollToTop} className="hover:text-white transition-colors">공지 사항</Link></li>
         </ul>
         </div>
         <div>
