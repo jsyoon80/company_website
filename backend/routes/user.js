@@ -56,11 +56,11 @@ router.post("/login", async (req, res) => {
       user.failedLoginAttempts += 1;
       user.lastLoginAttempt = new Date();
 
-      if (user.failedLoginAttempts >= 10) {
+      if (user.failedLoginAttempts >= 5) {
         user.isActive = false;
         await user.save();
         return res.status(401).json({
-          message: "비밀번호를 10회 이상 틀려 계정이 비활성화되었습니다.",
+          message: "비밀번호를 5회 이상 틀려 계정이 비활성화되었습니다.",
         });
       }
 
@@ -75,13 +75,13 @@ router.post("/login", async (req, res) => {
     user.lastLoginAttempt = new Date();
     user.isLoggedIn = true;
 
-    try {
-      const response = await axios.get("https://api.ipify.org?format=json");
-      const ipAddress = response.data.ip;
-      user.ipAddress = ipAddress;
-    } catch (error) {
-      console.log("IP 주소를 가져오던 중 오류 발생: ", error.message);
-    }
+    // try {
+    //   const response = await axios.get("https://api.ipify.org?format=json");
+    //   const ipAddress = response.data.ip;
+    //   user.ipAddress = ipAddress;
+    // } catch (error) {
+    //   console.log("IP 주소를 가져오던 중 오류 발생: ", error.message);
+    // }
 
     await user.save();
 
@@ -95,7 +95,7 @@ router.post("/login", async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: "production",
+      secure: false,
       sameSite: "strict",
       maxAge: 24 * 60 * 60 * 1000,
     });
@@ -132,7 +132,7 @@ router.post("/logout", async (req, res) => {
 
     res.clearCookie("token", {
       httpOnly: true,
-      secure: "production",
+      secure: false,
       sameSite: "strict",
     });
 
