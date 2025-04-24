@@ -23,17 +23,17 @@ const About = () => {
         </h2>
         <div className="text-base sm:text-lg leading-relaxed text-gray-600 space-y-6">
           <p>
-            iRDA Company는 2025년 1월 설립 이래, AI비전 머신카메라 장치 및 제어 시스템 분야에서 
+            iRDA Company는 2024년 11월 설립 이래, AI비전 머신카메라 장치 및 제어 시스템 분야에서 
             혁신적인 솔루션을 제공해온 선도적인 AI 비전 에이전트 기업입니다. 
-            AI비전 머신카메라(AVMC),피지컬 AI 로봇(VLA Robot),고효율 GPU,TPU,FPGA(임베디드 장치 포함) 
-            등의 핵심 제품을 개발 및 생산하고 있으며, LLM 및 Transformer 기반 AI 에이전트를 활용한 
+            AI비전 머신카메라(AVMC),피지컬AI(VLA로보트),고효율 GPU,TPU,FPGA(임베디드 장치)
+            등의 핵심 제품을 개발 및 생산하고 있으며, LLM 및 Transformer 기반 AI비전 에이전트를 활용한 
             이커머스 및 클라우드 시스템 구축에도 적극적으로 앞장서고 있습니다.
           </p>
           <p>
-            특히 <strong className="text-blue-600">AI 머신비전 카메라와 피치컬AI 솔루션 분야</strong>에서는 
+            특히 <strong className="text-blue-600">AI비전 머신카메라와 피치컬AI 솔루션 분야</strong>에서는 
             탁월한 기술력을 바탕으로 국내외 주요 팩토리와 산업 시설에 안정적인 시스템을 구축하며, 
             기술력을 인정받고 있습니다. 지속적인 R&D 투자와 기술 혁신을 통해 에너지 효율 향상 및 전력 품질 개선에 기여하고 있으며, 
-            친환경적이고 지속 가능한 미래를 위한 <span className="font-semibold text-indigo-600">AI 에이전트 솔루션</span>을 
+            친환경적이고 지속 가능한 미래를 위한 <span className="font-semibold text-indigo-600">AI비전 에이전트 솔루션</span>을 
             선도해 나가고 있습니다.
           </p>
         </div>
@@ -76,10 +76,13 @@ const About = () => {
         </h2>
         <div className="space-y-6 sm:space-y-12 max-w-5xl mx-auto">
           {[
+            { year: "2030", event: "글로벌 시장 리더/유니콘 달성" },
             { year: "2028", event: "글로벌 시장 진출" },
             { year: "2027", event: "시리즈 B 투자 유치" },
-            { year: "2026", event: "주요 기술 특허 획득" },
-            { year: "2025", event: "회사 설립" },
+            { year: "2026", event: "시리즈 A 투자 유치" },
+            { year: "2025", event: "주요 기술 특허 획득" },
+            { year: "2024", event: "회사 설립" },
+
           ].map((item, index) => (
             <div
               key={index}
