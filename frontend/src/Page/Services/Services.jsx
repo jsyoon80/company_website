@@ -12,19 +12,19 @@ const Services = () => {
       id: 2,
       title: "클라우드 서비스",
       description: "안정적이고 확장 가능한 클라우드 인프라 구축 및 관리",
-      icon: "☁️",
+      icon: "📤",
     },
     {
       id: 3,
-      title: "보안 솔루션",
-      description: "최신 보안 기술을 적용한 안전한 시스템 구축",
-      icon: "🔒",
+      title: "응용소프트웨어 솔루션",
+      description: "최신 AI 기술을 적용한 응용소프트웨어 구축",
+      icon: "📲",
     },
     {
       id: 4,
       title: "기술 컨설팅",
       description: "전문가의 분석을 통한 최적의 기술 전략 수립",
-      icon: "📊",
+      icon: "🎥",
     },
   ];
 
