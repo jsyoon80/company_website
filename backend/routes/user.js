@@ -56,18 +56,18 @@ router.post("/login", async (req, res) => {
       user.failedLoginAttempts += 1;
       user.lastLoginAttempt = new Date();
 
-      if (user.failedLoginAttempts >= 5) {
+      if (user.failedLoginAttempts >= 10) {
         user.isActive = false;
         await user.save();
         return res.status(401).json({
-          message: "비밀번호를 5회 이상 틀려 계정이 비활성화되었습니다.",
+          message: "비밀번호를 10회 이상 틀려 계정이 비활성화되었습니다.",
         });
       }
 
       await user.save();
       return res.status(401).json({
         message: "비밀번호가 일치하지 않습니다.",
-        remainingAttempts: 5 - user.failedLoginAttempts,
+        remainingAttempts: 10 - user.failedLoginAttempts,
       });
     }
 

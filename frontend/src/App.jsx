@@ -12,6 +12,8 @@ import Services from "./Page/Services/Services";
 import Board from "./Page/Board/Board";
 import Contact from "./Page/Contact/Contact";
 
+import AdminLogin from "./Page/Admin/AdminLogin"
+
 function Layout() {
   return (
     <>
@@ -53,7 +55,12 @@ const router = createBrowserRouter([
       }
 
     ]
-  }
+  },
+  {
+    path: "/admin",
+    element: <AdminLogin />,
+  },
+  
 ])
 
 function App() {
