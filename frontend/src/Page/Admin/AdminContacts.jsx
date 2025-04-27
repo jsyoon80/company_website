@@ -68,11 +68,13 @@ const AdminContacts = () => {
       </div>
 
       <div className="mb-4">
-        <div className="text-lg font-bold text-gray-600">총 0개의 문의</div>
+        {/* <div className="text-lg font-bold text-gray-600">총 0개의 문의</div> */}
+        <div className="text-lg font-bold text-gray-600">총 {contacts.length}개의 문의</div>
+
       </div>
 
       <div className="hidden md:block overflow-x-auto">
-        <table className="w-full bg-white shadow-md rounded-lg overflow-hidden text-sm lg:text-lg font-bold">
+      <table className="w-full bg-white shadow-md rounded-lg overflow-hidden text-sm font-bold">
           <thead className="bg-gray-100">
             <tr>
               <th className="px-4 py-3 text-left">번호</th>
