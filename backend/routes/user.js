@@ -56,18 +56,18 @@ router.post("/login", async (req, res) => {
       user.failedLoginAttempts += 1;
       user.lastLoginAttempt = new Date();
 
-      if (user.failedLoginAttempts >= 10) {
+      if (user.failedLoginAttempts >= 5) {
         user.isActive = false;
         await user.save();
         return res.status(401).json({
-          message: "비밀번호를 10회 이상 틀려 계정이 비활성화되었습니다.",
+          message: "비밀번호를 5회 이상 틀려 계정이 비활성화되었습니다.",
         });
       }
 
       await user.save();
       return res.status(401).json({
         message: "비밀번호가 일치하지 않습니다.",
-        remainingAttempts: 10 - user.failedLoginAttempts,
+        remainingAttempts: 5 - user.failedLoginAttempts,
       });
     }
 
@@ -95,7 +95,7 @@ router.post("/login", async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
+      secure: "production",
       sameSite: "strict",
       maxAge: 24 * 60 * 60 * 1000,
     });
@@ -132,7 +132,7 @@ router.post("/logout", async (req, res) => {
 
     res.clearCookie("token", {
       httpOnly: true,
-      secure: false,
+      secure: "production",
       sameSite: "strict",
     });
 
@@ -152,6 +152,25 @@ router.delete("/delete/:userId", async (req, res) => {
     res.json({ message: "사용자가 성공적으로 삭제되었습니다." });
   } catch (error) {
     res.status(500).json({ message: "서버 오류가 발생했습니다." });
+  }
+});
+
+router.post("/verify-token", (req, res) => {
+  const token = req.cookies.token;
+
+  if (!token) {
+    return res
+      .status(400)
+      .json({ isValid: false, message: "토큰이 없습니다." });
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    return res.status(200).json({ isValid: true, user: decoded });
+  } catch (error) {
+    return res
+      .status(401)
+      .json({ isValid: false, message: "유효하지 않은 토큰입니다." });
   }
 });
 
