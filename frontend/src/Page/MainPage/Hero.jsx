@@ -29,7 +29,8 @@ const Hero = () => {
 
             {/* ✅ p 태그 텍스트 오른쪽 정렬 */}
             <p className="text-ls sm:text-3xl text-gray-800 font-semibold mb-8 max-w-2xl mx-auto lg:text-right">
-              효율적인 AI비전 솔루션 개발부터 설치와 유지보수까지 전문가들이 함께합니다.
+              효율적인 AI비전 솔루션 개발부터 설치와 <br/>
+              유지보수까지 전문가들이 함께합니다.
             </p>
 
             {/* ✅ 버튼 오른쪽 정렬 */}

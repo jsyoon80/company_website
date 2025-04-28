@@ -19,14 +19,21 @@ const authenticateToken = (req, res, next) => {
   }
 };
 
+// ✅ 수정: region, inquiryType 추가
 router.post("/", async (req, res) => {
   try {
-    const { name, email, phone, message, status } = req.body;
+    const { name, email, phone, region, inquiryType, message, status } = req.body;
+
+    if (!['서비스문의', '구매문의'].includes(inquiryType)) {
+      return res.status(400).json({ message: "문의 분야 값이 잘못되었습니다." });
+    }
 
     const contact = new Contact({
       name,
       email,
       phone,
+      region,
+      inquiryType,
       message,
       status,
     });
@@ -62,31 +69,31 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// 상태 변경만 별도로 관리
 router.put("/:id", authenticateToken, async (req, res) => {
-    try {
-      const { status } = req.body;
-  
-      if (!['in progress', 'pending', 'completed'].includes(status)) {
-        return res.status(400).json({ message: "잘못된 상태값입니다." });
-      }
-  
-      const contact = await Contact.findByIdAndUpdate(
-        req.params.id,
-        { status },
-        { new: true }
-      );
-  
-      if (!contact) {
-        return res.status(404).json({ message: "문의를 찾을 수 없습니다." });
-      }
-  
-      res.json({ message: "문의 상태가 성공적으로 수정되었습니다.", contact });
-    } catch (error) {
-      console.log(error);
-      res.status(500).json({ message: "서버 에러가 발생했습니다.", error: process.env.NODE_ENV === "development" ? error.message : undefined });
+  try {
+    const { status } = req.body;
+
+    if (!['in progress', 'pending', 'completed'].includes(status)) {
+      return res.status(400).json({ message: "잘못된 상태값입니다." });
     }
-  });
-  
+
+    const contact = await Contact.findByIdAndUpdate(
+      req.params.id,
+      { status },
+      { new: true }
+    );
+
+    if (!contact) {
+      return res.status(404).json({ message: "문의를 찾을 수 없습니다." });
+    }
+
+    res.json({ message: "문의 상태가 성공적으로 수정되었습니다.", contact });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "서버 에러가 발생했습니다.", error: process.env.NODE_ENV === "development" ? error.message : undefined });
+  }
+});
 
 router.delete("/:id", async (req, res) => {
   try {

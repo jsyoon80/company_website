@@ -7,11 +7,12 @@ const Contact = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            사업 문의
+            제품 문의
           </h2>
           <p className="text-gray-600 text-lg">
             궁금하신 점이 있으신가요?  <br />
-            사업과 협력 관련해서는 언제든 문의해주세요.
+            사업과 협력 관련해서는 언제든 문의해주세요.<br />
+            정성을 다해 답변을 해드리겠습니다.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 mb-20">

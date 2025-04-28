@@ -19,7 +19,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">회사 소개</h3>
             <p className="text-gray-400">
-            우리 회사는 AI Vision Agent Global Leader로써 최고의 기술을 제공하기 위해 노력하고 있습니다.
+            우리 회사는 AI비전 에이전트 글로벌 리더로써 <br/>
+            최고의 기술을 제공하기 위해 정성을 다하여 <br/>
+            노력하고 있습니다.
           </p>
         </div>
 
@@ -30,7 +32,7 @@ const Footer = () => {
         <li><Link to="/about" onClick={scrollToTop} className="hover:text-white transition-colors">회사 소개</Link></li>
         <li><Link to="/product" onClick={scrollToTop} className="hover:text-white transition-colors">제품 소개</Link></li>
         <li><Link to="/our-services" onClick={scrollToTop} className="hover:text-white transition-colors">기술 지원</Link></li>
-        <li><Link to="/contact" onClick={scrollToTop} className="hover:text-white transition-colors">사업 문의</Link></li>
+        <li><Link to="/contact" onClick={scrollToTop} className="hover:text-white transition-colors">제품 문의</Link></li>
         <li><Link to="/board" onClick={scrollToTop} className="hover:text-white transition-colors">공지 사항</Link></li>
         </ul>
         </div>

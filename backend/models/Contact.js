@@ -17,6 +17,16 @@ const contactSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    region: {  // ✅ 지역 추가
+      type: String,
+      required: true,
+      trim: true,
+    },
+    inquiryType: {  // ✅ 문의 분야 추가
+      type: String,
+      enum: ['서비스문의', '구매문의'],
+      required: true,
+    },
     message: {
       type: String,
       required: true,

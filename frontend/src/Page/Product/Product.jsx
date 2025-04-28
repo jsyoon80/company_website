@@ -9,43 +9,46 @@ import Product7 from "../../assets/products/gpu.jpg";
 import Product8 from "../../assets/products/VLA.jpg";
 import Product9 from "../../assets/products/eCommerce.jpg";
 
-
 const Leadership = () => {
   const executives = [
     {
       name: "로보틱스 & 팩토리",
       position: "AI 공정 자동화",
-      description: 
-      ["▷ 제품 품질 검사", 
-        "▷ 제품 인식 추적", 
-        "▷ 스마트 팩토리"],
+      description: [
+        "▷ 제품 품질 검사",
+        "▷ 제품 인식 추적",
+        "▷ 스마트 팩토리",
+      ],
       imageUrl: Product2,
     },
     {
       name: "추적 관리",
       position: "CCTV & 자율주행, 운동, 생체인식",
-      description:
-      ["▷ 실시간 객체 추적관리", 
-        "▷ 얼굴/지문 인식 인증체계", 
-        "▷ ADAS/자율주행"],
+      description: [
+        "▷ 실시간 객체 추적관리",
+        "▷ 얼굴/지문 인식 인증체계",
+        "▷ ADAS/자율주행",
+      ],
       imageUrl: Product3,
     },
     {
       name: "AI 광고",
       position: "패션, 미용, 화장품, 운동, 도소매",
-      description:
-      ["▷ 고객 행동분석 추천시스템", 
-        "▷ 무인 점포", 
-        "▷ 스마트보드 캐스팅"],
+      description: [
+        "▷ 고객 행동분석 추천시스템",
+        "▷ 무인 점포",
+        "▷ 스마트보드 캐스팅",
+      ],
       imageUrl: Product4,
     },
     {
       name: "생성형 AI",
       position: "GEN-AI, GAN-AI, LLM, XR",
-      description:
-      ["▷ 콘텐츠 생성 에이전트", 
-        "▷ 가상 메이크업", 
-        "▷ 멘토링 분야"],
+      description: [
+        "▷ 콘텐츠 생성 에이전트",
+        "▷ 가상 메이크업",
+        "▷ 멘토링 분야",
+      ],
       imageUrl: Product5,
     },
   ];
@@ -54,37 +57,41 @@ const Leadership = () => {
     {
       name: "AI머신 비전카메라",
       position: "AI기반 실시간 객채탐지 & 분류",
-      description:
-      ["▷ AI에이전트 기반 자동의사결정", 
-        "▷ 클라우드 & 엣지 지원", 
-        "▷ 스마트 물류 & 산업 자동화"],
+      description: [
+        "▷ AI에이전트 기반 자동의사결정",
+        "▷ 클라우드 & 엣지 지원",
+        "▷ 스마트 물류 & 산업 자동화",
+      ],
       imageUrl: Product6,
     },
     {
       name: "AI 가속기",
       position: "GPU, TPU, FPGA, EDGE, Etc",
-      description:
-      ["▷ AI기반 고성능 프로세싱", 
-        "▷ 풍부한 I/O 및 확장성", 
-        "▷ AI 및 로봇용 가속 라이브러리 지원"],
+      description: [
+        "▷ AI기반 고성능 프로세싱",
+        "▷ 풍부한 I/O 및 확장성",
+        "▷ AI 및 로봇용 가속 라이브러리 지원",
+      ],
       imageUrl: Product7,
     },
     {
       name: "VAL 모델",
       position: "Vision-Languege-Actoin",
-      description:
-      ["▷ 컴퓨터 비전", 
-        "▷ NLP 이해 및 행동, 예측", 
-        "▷ 멀티모달 AI"],
+      description: [
+        "▷ 컴퓨터 비전",
+        "▷ NLP 이해 및 행동, 예측",
+        "▷ 멀티모달 AI",
+      ],
       imageUrl: Product8,
     },
     {
       name: "E-커머스 AI",
       position: "상품추천, 고객응대, 마케팅 자동화",
-      description:
-      ["▷ AI기반 개인화 마케팅", 
-        "▷ AI챗봇 및 음성비서", 
-        "▷ AI자동화 가격 및 물류최적화"],
+      description: [
+        "▷ AI기반 개인화 마케팅",
+        "▷ AI챗봇 및 음성비서",
+        "▷ AI자동화 가격 및 물류최적화",
+      ],
       imageUrl: Product9,
     },
   ];
@@ -107,8 +114,8 @@ const Leadership = () => {
             <p>안녕하십니까, iRDA 컴파니입니다.</p>
             <p>
               우리 iRDA Company는 20년 이상의 반도체 & 광학 산업 경력을 바탕으로, 혁신적인
-              AI기술과 서비스를 통해 고객 여러분께 최상의 가치를 제공하기 위해
-              노력하고 있습니다.
+              AI기술과 서비스를 통해 고객 여러분께 최상의 가치를 제공하기 위해 정성을 다해
+              노력하고 있습니다. 
             </p>
             <p>
               급변하는 글로벌 시장 환경 속에서도 지속적인 연구개발과 품질 혁신을
@@ -120,7 +127,11 @@ const Leadership = () => {
 
         <div className="md:w-1/3">
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={Product1} className="w-full aspect-[4/3] object-cover" />
+            <img
+              src={Product1}
+              className="w-full aspect-[4/3] object-cover transform hover:scale-110 transition-transform duration-300 rounded-2xl shadow-2xl"
+              alt="AI Vision Machine System"
+            />
             <div className="p-4 bg-white">
               <h3 className="text-xl font-bold text-gray-800">AI Vision Machine System</h3>
               <p className="text-indigo-600">Roll to Roll & Deep-Learning</p>
@@ -129,6 +140,7 @@ const Leadership = () => {
         </div>
       </div>
 
+      {/* 응용 분야 */}
       <div className="mb-24">
         <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
           응용 분야
@@ -139,23 +151,24 @@ const Leadership = () => {
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="aspect-square bg-gray-200">
+              <div className="aspect-square bg-gray-200 overflow-hidden">
                 <img
                   src={executive.imageUrl}
                   alt={executive.name}
-                  className="w-full h-full object-cover"
+                  className="relative rounded-2xl shadow-2xl w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">{executive.name}</h3>
                 <p className="text-indigo-600 font-semibold mb-4">{executive.position}</p>
-                <p className="text-gray-600">{executive.description}</p>
-                </div>
+                <p className="text-gray-600">{executive.description.join(", ")}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
+      {/* 핵심 기술 */}
       <div className="mb-24">
         <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">
           핵심 기술
@@ -166,18 +179,18 @@ const Leadership = () => {
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="aspect-square bg-gray-200">
+              <div className="aspect-square bg-gray-200 overflow-hidden">
                 <img
                   src={teamMember.imageUrl}
                   alt={teamMember.name}
-                  className="w-full h-full object-cover"
+                  className="relative rounded-2xl shadow-2xl w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">{teamMember.name}</h3>
                 <p className="text-indigo-600 font-semibold mb-4">{teamMember.position}</p>
-                <p className="text-gray-600">{teamMember.description}</p>
-                </div>
+                <p className="text-gray-600">{teamMember.description.join(", ")}</p>
+              </div>
             </div>
           ))}
         </div>
