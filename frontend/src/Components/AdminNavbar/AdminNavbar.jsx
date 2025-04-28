@@ -44,7 +44,7 @@ const AdminNavbar = () => {
               to="/admin/contacts"
               className="hover:bg-gray-700 px-3 py-2 rounded"
             >
-              문의 관리
+              제품 문의 관리
             </Link>
             <button
               onClick={handleLogout}
@@ -79,7 +79,7 @@ const AdminNavbar = () => {
                 className="block hover:bg-gray-700 px-3 py-2 rounded"
                 onClick={() => setIsOpen(false)}
               >
-                문의 관리
+                제품 문의 관리
               </Link>
               <button
                 onClick={handleLogout}

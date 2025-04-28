@@ -103,17 +103,17 @@ const Leadership = () => {
           제품 소개
         </h1>
         <p className="text-xl text-gray-600">
-          혁신과 성장을 이끄는 iRDA Company의 제품 포트폴리오
+          혁신과 성장을 이끄는 iRDA Company의 AI비전 제품 포트폴리오
         </p>
       </div>
 
       <div className="flex flex-col md:flex-row gap-12 mb-24 items-center">
         <div className="md:w-2/3">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">우리 제품은</h2>
+          {/* <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">우리 제품은</h2> */}
           <div className="text-base sm:text-lg text-gray-600 space-y-6">
-            <p>안녕하십니까, iRDA 컴파니입니다.</p>
+            {/* <p>안녕하십니까, iRDA 컴파니입니다.</p> */}
             <p>
-              우리 iRDA Company는 20년 이상의 반도체 & 광학 산업 경력을 바탕으로, 혁신적인
+              iRDA Company는 20년 이상의 반도체 & 광학 산업 경력을 바탕으로, 혁신적인
               AI기술과 서비스를 통해 고객 여러분께 최상의 가치를 제공하기 위해 정성을 다해
               노력하고 있습니다. 
             </p>

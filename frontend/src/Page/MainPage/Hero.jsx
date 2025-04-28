@@ -13,7 +13,7 @@ const Hero = () => {
               <img
                 src={HeroImage}
                 alt="AI Vision Hero"
-                className="relative rounded-2xl shadow-2xl w-full object-cover transform hover:scale-[1.1] transition-transform duration-300"
+                className="relative rounded-2xl shadow-2xl w-full object-cover transform hover:scale-[0.8] transition-transform duration-300"
               />
             </div>
           </div>
