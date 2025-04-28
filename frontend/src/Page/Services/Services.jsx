@@ -10,16 +10,17 @@ const Services = () => {
     },
     {
       id: 2,
+      title: "응용 소프트웨어 솔루션 개발",
+      description: "최신 AI 기술을 적용한 응용소프트웨어 구축",
+      icon: "📲",
+    },
+    {
+      id: 3,
       title: "클라우드 서비스",
       description: "안정적이고 확장 가능한 클라우드 인프라 구축 및 관리",
       icon: "📤",
     },
-    {
-      id: 3,
-      title: "응용소프트웨어 솔루션",
-      description: "최신 AI 기술을 적용한 응용소프트웨어 구축",
-      icon: "📲",
-    },
+
     {
       id: 4,
       title: "기술 컨설팅",
@@ -32,7 +33,7 @@ const Services = () => {
     <div className="container mx-auto px-4 py-32 max-w-7xl">
       <div className="text-center mb-12">
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          우리의 기술서비스
+          우리회사 기술서비스
         </h1>
         <p className="text-sm sm:text-lg text-gray-600">
           혁신적인 AI기술로 비즈니스의 성공을 지원합니다.
@@ -45,8 +46,8 @@ const Services = () => {
             key={service.id}
             className="bg-white p-8 rounded-lg shadow-lg hover:-translate-y-2 transition-transform duration-300"
           >
-            <div className="text-4xl mb-4">{service.icon}</div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
+            <div className="text-6xl mb-4">{service.icon}</div>
+            <h3 className="text-lg sm:text-2xl font-semibold text-gray-800 mb-4">
               {service.title}
             </h3>
             <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -132,12 +133,18 @@ const Services = () => {
         <p className="text-base sm:text-lg mb-8">
           전문가와 상담하고 최적의 솔루션을 찾아보세요.
         </p>
-        <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
+
+        {/* 버튼 대신 a 태그로 수정해서 이동 */}
+        <a
+          href="http://localhost:5173/contact"
+          className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300 inline-block"
+        >
           무료 상담 신청하기
-        </button>
+        </a>
       </div>
-    </div>
-  );
+
+          </div>
+        );
 };
 
 export default Services;
