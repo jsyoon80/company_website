@@ -31,9 +31,9 @@ const Footer = () => {
         <li><Link to="/" onClick={scrollToTop} className="hover:text-white transition-colors">홈</Link></li>
         <li><Link to="/about" onClick={scrollToTop} className="hover:text-white transition-colors">회사 소개</Link></li>
         <li><Link to="/product" onClick={scrollToTop} className="hover:text-white transition-colors">제품 소개</Link></li>
-        <li><Link to="/our-services" onClick={scrollToTop} className="hover:text-white transition-colors">기술 지원</Link></li>
+        <li><Link to="/our-services" onClick={scrollToTop} className="hover:text-white transition-colors">기술 서비스</Link></li>
         <li><Link to="/contact" onClick={scrollToTop} className="hover:text-white transition-colors">제품 문의</Link></li>
-        <li><Link to="/board" onClick={scrollToTop} className="hover:text-white transition-colors">공지 사항</Link></li>
+        <li><Link to="/board" onClick={scrollToTop} className="hover:text-white transition-colors">고객 센터</Link></li>
         </ul>
         </div>
         <div>
@@ -41,7 +41,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li>서울특별시 강남구</li>
               <li>테헤란로 79길 6, JS타워</li>
-              <li>전화: 1888-2882</li>
+              <li>전화: 02-2277-5700</li>
               <li>이메일: info@irda-ai.com</li>
             </ul>
           </div>
@@ -64,9 +64,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 iRDA Company. All rights reserved.</p>
-        </div>
+      <div className="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm md:text-base">
+        <p className="mb-0 px-4 text-xm md:text-base">
+          본 사이트의 모든 이미지 및 컨텐츠의 저작권은 iRDA컴파니에 있으며 무단으로 사용을 금합니다.
+        </p>
+        <p className="mb-0">
+          &copy; 2025 iRDA Company. All rights reserved.
+        </p>
+      </div>
+
+
+
 
     </footer>
   )

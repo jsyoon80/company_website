@@ -8,36 +8,50 @@ const Board = () => {
     {
       _id: 1,
       number: 1,
-      title: "업무관련 공지사항",
+      title: "[주문]제품 구매 상담은 어디로 하나요?",
       createdAt: "2025-01-01T10:00:00",
       views: 120,
     },
     {
       _id: 2,
       number: 2,
-      title: "신규프로젝트 공지사항",
+      title: "소모품 주문은 어디로 하나요?",
       createdAt: "2025-02-05T11:30:00",
       views: 95,
     },
     {
       _id: 3,
       number: 3,
-      title: "신규 고객관련 공지사항",
+      title: "최소 주문가능 수량은 얼마인가요?",
       createdAt: "2025-02-10T14:00:00",
       views: 70,
     },
     {
       _id: 4,
       number: 4,
-      title: "업무제휴관련 공지사항",
+      title: "배송가능 지역과 배송비는 얼마인가요?",
       createdAt: "2025-03-15T15:45:00",
       views: 50,
     },
     {
       _id: 5,
       number: 5,
-      title: "전시회관련 공지사항",
+      title: "배송은 얼마나 걸리나요?",
       createdAt: "2025-04-20T09:15:00",
+      views: 30,
+    },
+    {
+      _id: 6,
+      number: 6,
+      title: "배송 확인은 어떻게 하나요?",
+      createdAt: "2025-04-22T09:15:00",
+      views: 30,
+    },
+    {
+      _id: 7,
+      number: 7,
+      title: "기술 지원은 어떻게 하나요?",
+      createdAt: "2025-04-29T09:15:00",
       views: 30,
     },
   ];
@@ -49,7 +63,7 @@ const Board = () => {
   return (
     <div className="p-4 md:p-6 max-w-7xl mx-auto py-32 md:py-32">
       <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">
-        공지사항 게시판
+        자주 문는질문
       </h1>
 
       <div className="overflow-x-auto">
