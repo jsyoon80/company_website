@@ -10,11 +10,11 @@ const About = () => {
           className="w-full h-full object-cover transform scale-60 group-hover:scale-90 transition-transform duration-300 rounded-2xl"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900"></div>
-        <div className="absolute bottom-8 left-4 md:bottom-12 md:left-12 text-white">
+        <div className="absolute bottom-4 left-4 md:bottom-12 md:left-12 text-white">
           <h3 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
             iRDA Company
           </h3>
-          <p className="text-base md:text-xl font-light">
+          <p className="text-base md:text-2xl font-light">
             혁신과 신뢰로 글로벌 시장을 선도합니다.
           </p>
         </div>

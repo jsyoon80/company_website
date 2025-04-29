@@ -17,6 +17,8 @@
     "@tinymce/tinymce-react": "^6.1.0",
     "axios": "^1.9.0",
     "date-fn": "^0.0.2",
+    "date-fns": "^4.1.0",
+    "dompurify": "^3.2.5",
     "multer": "^1.4.5-lts.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
