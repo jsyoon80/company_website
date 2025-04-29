@@ -1,5 +1,5 @@
 import React from "react";
-import companyImage from "../../assets/Dreamcity.png";
+import companyImage from "../../assets/Dreamcity0.jpg";
 
 const About = () => {
   return (
@@ -7,7 +7,7 @@ const About = () => {
         <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-24 group">
         <img
           src={companyImage}
-          className="w-full h-full object-cover transform scale-100 group-hover:scale-90 transition-transform duration-300 rounded-2xl"
+          className="w-full h-full object-cover transform scale-60 group-hover:scale-90 transition-transform duration-300 rounded-2xl"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900"></div>
         <div className="absolute bottom-8 left-4 md:bottom-12 md:left-12 text-white">

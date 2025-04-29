@@ -36,70 +36,69 @@ const AdminCreatePost = () => {
         </div>
       </div>
     )
-    );
+  );
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const editorContent = editorRef.current.getContent({ format: "text" });  // ✅ HTML 제거하고 순수 텍스트만 저장
-        setShowUploadModal(true);
-    
-        try {
-        const uploadedFiles = await Promise.all(
-            formData.files.map(async (file) => {
-            setCurrentUpload(file.name);
-            const fileFormData = new FormData();
-            const encodedFileName = encodeURIComponent(file.name);
-            fileFormData.append("file", file);
-            fileFormData.append("originalName", encodedFileName);
-    
-            const response = await axios.post(
-                "http://localhost:3000/api/upload/file",
-                fileFormData,
-                {
-                withCredentials: true,
-                headers: {
-                    "Content-Type": "multipart/form-data",
-                },
-                onUploadProgress: (progressEvent) => {
-                    const percentCompleted = Math.round(
-                    (progressEvent.loaded * 100) / progressEvent.total
-                    );
-                    setUploadProgress((prev) => ({
-                    ...prev,
-                    [file.name]: percentCompleted,
-                    }));
-                },
-                }
-            );
-            return response.data.fileUrl;
-            })
-        );
-    
-        const postData = {
-            title: formData.title,
-            content: editorContent,  // ✅ 여기도 그대로
-            fileUrl: uploadedFiles,
-        };
-    
-        await axios.post(
-            "http://localhost:3000/api/post",
-            postData,
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const editorContent = editorRef.current.getContent();
+    setShowUploadModal(true);
+
+    try {
+      const uploadedFiles = await Promise.all(
+        formData.files.map(async (file) => {
+          setCurrentUpload(file.name);
+          const fileFormData = new FormData();
+          const encodedFileName = encodeURIComponent(file.name);
+          fileFormData.append("file", file);
+          fileFormData.append("originalName", encodedFileName);
+
+          const response = await axios.post(
+            "http://localhost:3000/api/upload/file",
+            fileFormData,
             {
-            withCredentials: true,
-            headers: {
-                "Content-Type": "application/json",
-            },
+              withCredentials: true,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+              onUploadProgress: (progressEvent) => {
+                const percentCompleted = Math.round(
+                  (progressEvent.loaded * 100) / progressEvent.total
+                );
+                setUploadProgress((prev) => ({
+                  ...prev,
+                  [file.name]: percentCompleted,
+                }));
+              },
             }
-        );
-    
-        setShowUploadModal(false);
-        navigate("/admin/posts");
-        } catch (error) {
-        console.error("Error creating post:", error);
-        setShowUploadModal(false);
+          );
+          return response.data.fileUrl;
+        })
+      );
+
+      const postData = {
+        title: formData.title,
+        content: editorContent,
+        fileUrl: uploadedFiles,
+      };
+
+      await axios.post(
+        "http://localhost:3000/api/post",
+        postData,
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-    };
-  
+      );
+
+      setShowUploadModal(false);
+      navigate("/admin/posts");
+    } catch (error) {
+      console.error("Error creating post:", error);
+      setShowUploadModal(false);
+    }
+  };
 
   const handleFileChange = (e) => {
     const newFiles = Array.from(e.target.files);

@@ -63,7 +63,7 @@ const Contact = () => {
             to="/contact"
             className="inline-block px-10 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-300 ease-in-out hover:shadow-lg"
           >
-            제품문의 작성하기
+            문의 하기
           </Link>
         </div>
       </div>

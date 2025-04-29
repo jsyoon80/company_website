@@ -49,7 +49,6 @@ const Board = () => {
     const start = (currentPage - 1) * pageSize;
     return filteredPosts.slice(start, start + pageSize);
   }, [filteredPosts, currentPage, pageSize]);
-
   return (
     <div className="p-4 mx-auto max-w-7xl py-32">
       <h1 className="text-4xl font-bold mb-6 text-center">자주 묻는질문</h1>

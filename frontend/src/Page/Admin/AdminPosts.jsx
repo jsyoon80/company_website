@@ -72,7 +72,7 @@ const AdminPosts = () => {
 
   return (
     <div className="p-4 mx-auto max-w-[1700px]">
-      <h1 className="text-4xl font-bold mt-6 mb-4">게시물 관리</h1>
+      <h1 className="text-4xl font-bold mt-6 mb-4">게시글 관리</h1>
 
       <div className="mb-4 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex w-full md:w-auto gap-2">
