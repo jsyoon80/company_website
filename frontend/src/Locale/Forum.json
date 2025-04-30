@@ -1,0 +1,50 @@
+{
+  "ko": {
+    "forum": {
+      "title": "자주 묻는질문",
+      "viewAll": "전체보기",
+      "loading": "로딩 중...",
+      "noRecentPosts": "최근 게시물이 없습니다.",
+      "postInfo": {
+        "number": "No.",
+        "views": "조회수",
+        "files": "파일"
+      },
+      "errors": {
+        "loadFailed": "게시글 로딩 실패"
+      }
+    }
+  },
+  "en": {
+    "forum": {
+      "title": "Frequently Asked Questions",
+      "viewAll": "View All",
+      "loading": "Loading...",
+      "noRecentPosts": "No recent posts available.",
+      "postInfo": {
+        "number": "No.",
+        "views": "Views",
+        "files": "Files"
+      },
+      "errors": {
+        "loadFailed": "Failed to load posts"
+      }
+    }
+  },
+  "zh": {
+    "forum": {
+      "title": "常见问题",
+      "viewAll": "查看全部",
+      "loading": "加载中...",
+      "noRecentPosts": "暂无最近的帖子。",
+      "postInfo": {
+        "number": "编号",
+        "views": "浏览量",
+        "files": "附件"
+      },
+      "errors": {
+        "loadFailed": "帖子加载失败"
+      }
+    }
+  }
+}

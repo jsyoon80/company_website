@@ -132,7 +132,7 @@ const router = createBrowserRouter([
         element: <SinglePost />,
       },
       {
-        path: "/our-services",
+        path: "/services",
         element: <Services />,
       },
       {

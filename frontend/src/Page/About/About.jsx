@@ -79,7 +79,7 @@ const About = () => {
       {/* ✅ 핵심 가치 카드 */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-24 px-4 sm:px-0">
         {[
-          { title: "혁신", desc: "끊임없는 도전과 기술혁신으로 미래를 선도합니다" },
+          { title: "혁신", desc: "끊임없는 도전과 AI기술혁신으로 미래를 선도합니다" },
           { title: "신뢰", desc: "고객과의 신뢰를 최우선 가치로 삼습니다" },
           { title: "성장", desc: "구성원들의 지속적인 성장을 지원합니다" },
         ].map((value, index) => (

@@ -1,0 +1,50 @@
+{
+  "ko": {
+    "company": { "name": "iRDA Company" },
+    "language": "한국어",
+    "menu": {
+      "Home": "홈",
+      "About": "회사 소개",
+      "Product": "제품 소개",
+      "Technical Services": "기술 서비스",
+      "Product Inquiry": "제품 문의",
+      "Customer Service": "고객센터"
+    },
+    "buttons": {
+      "menu": "메뉴 열기",
+      "close": "메뉴 닫기"
+    }
+  },
+  "en": {
+    "company": { "name": "iRDA Company" },
+    "language": "English",
+    "menu": {
+      "Home": "Home",
+      "About": "About Us",
+      "Product": "Products",
+      "Technical Services": "Technical Services",
+      "Product Inquiry": "Product Inquiry",
+      "Customer Service": "Support"
+    },
+    "buttons": {
+      "menu": "Open menu",
+      "close": "Close menu"
+    }
+  },
+  "zh": {
+    "company": { "name": "iRDA公司" },
+    "language": "中文",
+    "menu": {
+      "Home": "主页",
+      "About": "关于我们",
+      "Product": "产品介绍",
+      "Technical Services": "技术服务",
+      "Product Inquiry": "产品咨询",
+      "Customer Service": "客户服务"
+    },
+    "buttons": {
+      "menu": "打开菜单",
+      "close": "关闭菜单"
+    }
+  }
+}

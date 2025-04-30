@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+import translations from '../../Locale/Navbar.json';
 
 const menuItems = [
-  { path: "/", label: "홈" },
-  { path: "/about", label: "회사 소개" },
-  { path: "/product", label: "제품 소개" },
-  { path: "/our-services", label: "기술 서비스" },
-  { path: "/contact", label: "제품 문의" },
-  { path: "/board", label: "고객 센터" },
+  { path: "/", key: "Home" },
+  { path: "/about", key: "About" },
+  { path: "/product", key: "Product" },
+  { path: "/services", key: "Technical Services" },
+  { path: "/contact", key: "Product Inquiry" },
+  { path: "/board", key: "Customer Service" },
 ];
 
 const MenuItem = ({ path, label, onClick }) => (
@@ -16,79 +17,99 @@ const MenuItem = ({ path, label, onClick }) => (
     <Link
       to={path}
       className="hover:text-blue-600 transition duration-300"
-      onClick={onClick}
+      onClick={() => {
+        onClick();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
     >
       {label}
     </Link>
   </li>
 );
 
-const Navbar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState("ko");  // ✅ 오타 수정
+  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'ko');
+
+  useEffect(() => {
+    localStorage.setItem('language', language);
+    window.dispatchEvent(new Event('languageChange'));
+  }, [language]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white text-black p-4 shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* 로고 */}
-        <h1 className="text-2xl lg:text-2xl font-bold lg:ml-12 lg:mr-8">
-          <Link to="/">
-            <span className="text-blue-700 font-bold">i</span>
-            <span className="text-green-500 font-bold">R</span>
-            <span className="text-red-500 font-bold">D</span>
-            <span className="text-yellow-700 font-bold">A</span>
-            <span className="text-black text-base font-normal ml-1">Company</span>
-          </Link>
-        </h1>
+      <h1 className="text-xl lg:text-2xl font-bold lg:ml-12 lg:mr-8">
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex gap-0"
+        >
+          <span className="text-blue-600 font-bold">i</span>
+          <span className="text-green-600 font-bold">R</span>
+          <span className="text-red-800 font-bold">D</span>
+          <span className="text-orange-500 font-bold">A</span>
+          <span className="ml-1">
+            {translations[language].company.name.replace(/iRDA/i, "").trim()}
+          </span>
+        </Link>
+      </h1>
 
 
-        {/* 데스크톱 메뉴 */}
         <div className="hidden lg:flex flex-1 justify-center">
           <ul className="flex gap-8 text-lg">
             {menuItems.map((item) => (
-              <MenuItem key={item.path} {...item} />
+              <MenuItem
+                key={item.path}
+                path={item.path}
+                label={translations[language].menu[item.key]}
+                onClick={() => {}}
+              />
             ))}
           </ul>
         </div>
 
-        {/* 데스크톱 언어 선택 */}
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
-          className="hidden lg:block px-3 ml-8 border rounded-md bg-white hover:border-blue-500 transition duration-300"
+          className="hidden lg:block px-3 py-1 ml-8 border rounded-md bg-white hover:border-blue-500 transition duration-300"
         >
-          <option value="ko">한국어</option>
-          <option value="en">English</option>
-          <option value="cn">中文</option>
+          <option value="ko">{translations.ko.language}</option>
+          <option value="en">{translations.en.language}</option>
+          <option value="zh">{translations.zh.language}</option>
         </select>
 
-        {/* 모바일 메뉴 버튼 */}
-        <button className="lg:hidden text-2xl" onClick={toggleMenu} aria-label="메뉴">
+        <button
+          className="lg:hidden text-2xl"
+          onClick={toggleMenu}
+          aria-label={translations[language].buttons.menu}
+        >
           {isOpen ? <HiX /> : <HiMenu />}
         </button>
       </div>
 
-      {/* 모바일 메뉴 드로어 */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white text-black transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
         <div className="p-4">
-          <button className="text-2xl mb-8 float-right" onClick={toggleMenu} aria-label="닫기">
+          <button
+            className="text-2xl mb-8 float-right"
+            onClick={toggleMenu}
+            aria-label={translations[language].buttons.close}
+          >
             <HiX />
           </button>
           <ul className="clear-both space-y-4 pt-8 text-lg">
             {menuItems.map((item) => (
               <MenuItem
                 key={item.path}
-                {...item}
-                onClick={() => {
-                  setIsOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
+                path={item.path}
+                label={translations[language].menu[item.key]}
+                onClick={() => setIsOpen(false)}
               />
             ))}
           </ul>
@@ -97,9 +118,9 @@ const Navbar = () => {
             onChange={(e) => setLanguage(e.target.value)}
             className="mt-6 w-full px-3 py-1 border rounded-md bg-white hover:border-blue-500 transition duration-300"
           >
-            <option value="ko">한국어</option>
-            <option value="en">English</option>
-            <option value="cn">中文</option>
+            <option value="ko">{translations.ko.language}</option>
+            <option value="en">{translations.en.language}</option>
+            <option value="zh">{translations.zh.language}</option>
           </select>
         </div>
       </div>
@@ -107,4 +128,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

@@ -1,0 +1,134 @@
+{
+  "ko": {
+    "title": "회사 소개",
+    "subtitle": "혁신적인 AI기술 솔루션을 제공하는 글로벌 기업",
+    "description": {
+      "part1": "iRDA Company는 2024년 11월 설립 이래, AI비전 머신카메라 장치 및 제어 시스템 분야에서 ",
+      "part2": "혁신적인 솔루션을 제공해온 선도적인 AI 비전 에이전트 기업입니다.",
+      "part3": "AI비전 머신카메라(AVMC), 피지컬AI(VLA로보트), 고효율 GPU, TPU, FPGA(임베디드 장치)등의 핵심 제품을 개발 및 생산하고 있으며, ",
+      "part4": "LLM 및 Transformer 기반 AI비전 에이전트를 활용한 응용 애플리케이션 이커머스 및 클라우드 시스템 구축에도 적극적으로 앞장서고 있습니다.",
+      "part5": "AI비전 머신카메라와 피지컬AI 솔루션 분야에서는", 
+      "part6": "탁월한 기술력을 바탕으로 국내외 주요 팩토리와 산업 시설에 안정적인 시스템을 구축하며, ", 
+      "part7": "기술력을 인정받고 있습니다. 지속적인 R&D 투자와 기술 혁신을 통해 에너지 효율 향상 및 전력 품질 개선에 기여하고 있으며,",
+      "part8": "친환경적이고 지속 가능한 미래를 위한 AI비전 에이전트 솔루션을 선도해 나가고 있습니다."
+    },
+    "values": {
+      "innovation": {
+        "title": "혁신",
+        "desc": "끊임없는 도전과 AI기술혁신으로 미래를 선도합니다"
+      },
+      "trust": {
+        "title": "신뢰",
+        "desc": "고객과의 신뢰를 최우선 가치로 삼습니다"
+      },
+      "growth": {
+        "title": "성장",
+        "desc": "구성원들의 지속적인 성장을 지원합니다"
+      }
+    },
+    "vision": {
+      "title": "비전",
+      "content": "2030년까지 글로벌 시장을 선도하는 기술 혁신 기업으로 도약하여, 더 나은 세상을 만드는데 기여하겠습니다."
+    },
+    "history": {
+      "title": "회사 연혁",
+      "events": {
+        "2030": "유니콘 달성",
+        "2029": "글로벌 시장 리더",
+        "2028": "글로벌 시장 진출",
+        "2027": "시리즈 B 투자 유치",
+        "2026": "시리즈 A 투자 유치",
+        "2025": "주요 기술 특허 획득",
+        "2024": "회사 설립"
+      }
+    }
+  },
+  "en": {
+    "title": "About Us",
+    "subtitle": "A Global Company Providing Innovative AI Technology Solutions",
+    "description": {
+      "part1": "Since its establishment in November 2024, iRDA Company has been a leader in AI vision machine camera and control systems, ",
+      "part2": "providing innovative solutions as a pioneering AI vision agent company.",
+      "part3": "We develop and manufacture key products such as AI Vision Machine Cameras (AVMC), Physical AI (VLA Robots), and high-efficiency GPU, TPU, and FPGA (embedded devices), ",
+      "part4": "and actively lead the construction of application-based e-commerce and cloud systems using LLM and Transformer-based AI vision agents.",
+      "part5": "In the field of AI vision cameras and Physical AI solutions,",
+      "part6": "we have built stable systems for major factories and industrial sites domestically and internationally based on outstanding technical capabilities,",
+      "part7": "earning recognition for our technology. Through continuous R&D and innovation, we contribute to improving energy efficiency and power quality,",
+      "part8": "leading sustainable and eco-friendly AI vision agent solutions for the future."
+    },
+    "values": {
+      "innovation": {
+        "title": "Innovation",
+        "desc": "We lead the future through continuous challenges and AI innovation"
+      },
+      "trust": {
+        "title": "Trust",
+        "desc": "We prioritize trust with our customers"
+      },
+      "growth": {
+        "title": "Growth",
+        "desc": "We support the continuous growth of our members"
+      }
+    },
+    "vision": {
+      "title": "Vision",
+      "content": "By 2030, we aim to become a leading global technology innovation company and contribute to creating a better world."
+    },
+    "history": {
+      "title": "Company History",
+      "events": {
+        "2030": "Achieved Unicorn Status",
+        "2029": "Global Market Leader",
+        "2028": "Entered Global Market",
+        "2027": "Series B Funding",
+        "2026": "Series A Funding",
+        "2025": "Secured Key Technology Patents",
+        "2024": "Company Founded"
+      }
+    }
+  },
+  "zh": {
+    "title": "公司简介",
+    "subtitle": "提供创新AI技术解决方案的全球企业",
+    "description": {
+      "part1": "iRDA公司自2024年11月成立以来，一直在AI视觉机器相机与控制系统领域，",
+      "part2": "作为领先的AI视觉代理企业，持续提供创新解决方案。",
+      "part3": "我们开发并生产核心产品，如AI视觉机器相机（AVMC）、物理AI（VLA机器人）、高效GPU、TPU、FPGA（嵌入式设备），",
+      "part4": "并积极推进基于LLM与Transformer的AI视觉代理在应用电商与云系统中的构建。",
+      "part5": "在AI视觉相机与物理AI解决方案领域，",
+      "part6": "我们凭借卓越的技术实力在国内外主要工厂和工业设施中构建了稳定系统，",
+      "part7": "赢得了业界的认可。通过持续的研发投资与技术创新，提升能源效率与电力质量，",
+      "part8": "引领面向环保与可持续未来的AI视觉代理解决方案。"
+    },
+    "values": {
+      "innovation": {
+        "title": "创新",
+        "desc": "通过不断挑战与AI创新引领未来"
+      },
+      "trust": {
+        "title": "信任",
+        "desc": "将客户信任视为首要价值"
+      },
+      "growth": {
+        "title": "成长",
+        "desc": "支持成员的持续成长"
+      }
+    },
+    "vision": {
+      "title": "愿景",
+      "content": "到2030年，成为全球领先的技术创新企业，为建设更美好的世界做出贡献。"
+    },
+    "history": {
+      "title": "公司历程",
+      "events": {
+        "2030": "达成独角兽企业地位",
+        "2029": "全球市场领导者",
+        "2028": "进军全球市场",
+        "2027": "完成B轮融资",
+        "2026": "完成A轮融资",
+        "2025": "获得核心技术专利",
+        "2024": "公司成立"
+      }
+    }
+  }
+}

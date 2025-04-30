@@ -1,0 +1,95 @@
+{
+  "ko": {
+    "footer": {
+      "company": {
+        "title": "회사 소개",
+        "description": "우리 회사는 AI비전 에이전트 글로벌 리더로써 최고의 기술을 제공하기 위해 정성을 다하여 노력하고 있습니다."
+      },
+      "quickLinks": {
+        "title": "빠른 링크",
+        "home": "홈",
+        "about": "회사 정보",
+        "product": "제품 소개",
+        "services": "기술 서비스",
+        "contact": "제품 문의",
+        "board": "고객 센터"
+      },
+      "contact": {
+        "title": "연락처",
+        "address1": "서울특별시 강남구",
+        "address2": "테헤란로 79길 6, JS타워",
+        "phone": "전화: 02-2277-5700",
+        "email": "이메일: info@irda-ai.com"
+      },
+      "social": {
+        "title": "소셜 미디어"
+      },
+      "copyright": [
+        "본 사이트의 모든 이미지 및 컨텐츠의 저작권은 iRDA컴파니에 있으며 무단으로 사용을 금합니다.",
+        "© 2025 iRDA Company. All rights reserved."
+      ]
+    }
+  },
+  "en": {
+    "footer": {
+      "company": {
+        "title": "About Us",
+        "description": "As a global leader in AI Vision Agents, our company is dedicated to providing the best technology with utmost care and effort."
+      },
+      "quickLinks": {
+        "title": "Quick Links",
+        "home": "Home",
+        "about": "About",
+        "product": "Products",
+        "services": "Services",
+        "contact": "Contact",
+        "board": "Support Center"
+      },
+      "contact": {
+        "title": "Contact",
+        "address1": "Gangnam-gu, Seoul",
+        "address2": "6, Teheran-ro 79-gil, JS Tower",
+        "phone": "Phone: +82-2-2277-5700",
+        "email": "Email: info@irda-ai.com"
+      },
+      "social": {
+        "title": "Social Media"
+      },
+      "copyright": [
+        "All images and content on this site are copyrighted by iRDA Company and unauthorized use is prohibited.",
+        "© 2025 iRDA Company. All rights reserved."
+      ]
+    }
+  },
+  "zh": {
+    "footer": {
+      "company": {
+        "title": "公司简介",
+        "description": "作为AI视觉代理领域的全球领导者，我们公司致力于以最大的诚意和努力提供最先进的技术。"
+      },
+      "quickLinks": {
+        "title": "快速链接",
+        "home": "首页",
+        "about": "关于我们",
+        "product": "产品介绍",
+        "services": "技术服务",
+        "contact": "产品咨询",
+        "board": "客户中心"
+      },
+      "contact": {
+        "title": "联系方式",
+        "address1": "首尔特别市 江南区",
+        "address2": "德黑兰路79街6号，JS大厦",
+        "phone": "电话：+82-2-2277-5700",
+        "email": "邮箱：info@irda-ai.com"
+      },
+      "social": {
+        "title": "社交媒体"
+      },
+      "copyright": [
+        "本网站所有图像和内容的版权归iRDA公司所有，严禁未经授权使用。",
+        "© 2025 iRDA公司 版权所有。"
+      ]
+    }
+  }
+}
