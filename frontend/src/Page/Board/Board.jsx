@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Board = () => {
   const [posts, setPosts] = useState([]);
@@ -49,11 +50,41 @@ const Board = () => {
     const start = (currentPage - 1) * pageSize;
     return filteredPosts.slice(start, start + pageSize);
   }, [filteredPosts, currentPage, pageSize]);
+
+  const textVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } },
+  };
+
+  const cardVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay: i * 0.1 },
+    }),
+  };
+
   return (
     <div className="p-4 mx-auto max-w-7xl py-32">
-      <h1 className="text-4xl font-bold mb-6 text-center">자주 묻는질문</h1>
 
-      <div className="mb-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      {/* ✅ 상단 제목 */}
+      <motion.h1
+        className="text-4xl font-bold mb-6 text-center"
+        initial="hidden"
+        animate="visible"
+        variants={textVariant}
+      >
+        자주 묻는 질문
+      </motion.h1>
+
+      {/* ✅ 검색 및 필터 */}
+      <motion.div
+        className="mb-4 flex flex-col md:flex-row justify-between items-center gap-4"
+        initial="hidden"
+        animate="visible"
+        variants={textVariant}
+      >
         <div className="flex w-full md:w-auto gap-2">
           <select
             className="border rounded px-3 py-2 text-base"
@@ -109,39 +140,42 @@ const Board = () => {
             ))}
           </select>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="hidden md:block overflow-x-auto">
+      {/* ✅ 데스크탑 테이블 */}
+      <motion.div
+        className="hidden md:block overflow-x-auto"
+        initial="hidden"
+        animate="visible"
+        variants={textVariant}
+      >
         <table className="min-w-full bg-white border rounded-lg">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-[8%]">
-                번호
-              </th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-auto">
-                제목
-              </th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-[15%]">
-                작성일
-              </th>
-              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-[8%]">
-                조회수
-              </th>
+              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-[8%]">번호</th>
+              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-auto">제목</th>
+              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-[15%]">작성일</th>
+              <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider w-[8%]">조회수</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
             {paginatedPosts.length === 0 ? (
               <tr>
-                <td
-                  colSpan="4"
-                  className="px-4 py-8 text-center text-gray-500"
-                >
+                <td colSpan="4" className="px-4 py-8 text-center text-gray-500">
                   게시글이 없습니다.
                 </td>
               </tr>
             ) : (
               paginatedPosts.map((post, index) => (
-                <tr onClick={() => {navigate(`/post/${post._id}`)}} key={post._id} className="hover:bg-gray-50 cursor-pointer">
+                <motion.tr
+                  key={post._id}
+                  className="hover:bg-gray-50 cursor-pointer"
+                  onClick={() => navigate(`/post/${post._id}`)}
+                  initial="hidden"
+                  animate="visible"
+                  custom={index}
+                  variants={cardVariant}
+                >
                   <td className="px-6 py-4 whitespace-nowrap">
                     {(currentPage - 1) * pageSize + index + 1}
                   </td>
@@ -151,14 +185,17 @@ const Board = () => {
                   <td className="px-6 py-4 whitespace-nowrap">
                     {new Date(post.createdAt).toLocaleDateString()}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">{post.views}</td>
-                </tr>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {post.views}
+                  </td>
+                </motion.tr>
               ))
             )}
           </tbody>
         </table>
-      </div>
+      </motion.div>
 
+      {/* ✅ 모바일 카드형 */}
       <div className="md:hidden grid grid-cols-1 gap-4">
         {paginatedPosts.length === 0 ? (
           <div className="col-span-full text-center text-gray-500">
@@ -166,10 +203,14 @@ const Board = () => {
           </div>
         ) : (
           paginatedPosts.map((post, index) => (
-            <div
+            <motion.div
               key={post._id}
-              onClick={() => {navigate(`/post/${post._id}`)}}
-              className="border rounded-lg p-4 bg-white shadow-md hover:shadow-lg transition-shadow"
+              onClick={() => navigate(`/post/${post._id}`)}
+              className="border rounded-lg p-4 bg-white shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+              initial="hidden"
+              animate="visible"
+              custom={index}
+              variants={cardVariant}
             >
               <div className="flex justify-between items-center mb-2">
                 <h3 className="text-lg font-bold truncate">{post.title}</h3>
@@ -183,12 +224,18 @@ const Board = () => {
               <p className="text-sm text-gray-600">
                 조회수: {post.views}
               </p>
-            </div>
+            </motion.div>
           ))
         )}
       </div>
 
-      <div className="mt-4 flex justify-center space-x-2 text-lg font-bold">
+      {/* ✅ 페이지네이션 */}
+      <motion.div
+        className="mt-4 flex justify-center space-x-2 text-lg font-bold"
+        initial="hidden"
+        animate="visible"
+        variants={textVariant}
+      >
         <button
           className="px-3 py-1 rounded border disabled:opacity-50"
           onClick={() => setCurrentPage((p) => p - 1)}
@@ -206,7 +253,8 @@ const Board = () => {
         >
           다음
         </button>
-      </div>
+      </motion.div>
+
     </div>
   );
 };
