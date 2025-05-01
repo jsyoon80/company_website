@@ -1,0 +1,44 @@
+mongoDB
+jongsuyoon80
+8n8KOj6fyA0jNNmq
+
+
+mongodb://atlas-sql-6809abe4374e126ded0c8ec5-qbrygy.a.query.mongodb.net/sample_mflix?ssl=true&authSource=admin
+
+
+
+mongodb+srv://jongsuyoon80:<db_password>@irdacompany.n0rhsd8.mongodb.net/?retryWrites=true&w=majority&appName=iRDAcompany 
+
+
+
+AWS엑서스키
+AKIAZ77WRU6K3ICZQSFG
+AWS비밀 엑서스키
+Cpi4ZTDWhOEU4fD3rJnuOGrD1lBaoU7bTBVEmtUr
+
+Tiny Clode
+
+
+
+연동싸이트
+1.MongoDB: https://cloud.mongodb.com/v2/6809ab71882edb1d3d35992e#/metrics/replicaSet/6809abfa6dba4c0ecab8e44b/explorer/test/users/find
+
+
+
+2. AWS
+https://ap-northeast-2.console.aws.amazon.com/s3/buckets/irda-ai-company?region=ap-northeast-2&bucketType=general
+
+3. Tiny  clode
+https://www.tiny.cloud/my-account/integrate/#html
+
+3. Noton
+https://www.notion.so/MERN-1df329462e17808c8db8ddb91777363c#1df329462e1781e4a658ce42715c6ef6
+
+4. React
+https://ko.legacy.reactjs.org/docs/getting-started.html
+
+5. tailwindcss
+https://v2.tailwindcss.com/docs
+
+6. Material UI
+https://mui.com/material-ui/getting-started/installation/

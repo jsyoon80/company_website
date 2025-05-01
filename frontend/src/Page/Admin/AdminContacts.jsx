@@ -1,60 +1,58 @@
 import axios from "axios";
 import React, { useEffect, useMemo, useState } from "react";
 import Swal from "sweetalert2";
+import { motion, AnimatePresence } from "framer-motion";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.05, duration: 0.4 },
+  }),
+};
 
 const AdminContacts = () => {
   const [contacts, setContacts] = useState([]);
   const [pageSize, setPageSize] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedContact, setSelectContact] = useState(null);
+  const [selectedContact, setSelectedContact] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("name");
   const [statusFilter, setStatusFilter] = useState("all");
 
   useEffect(() => {
-    const fetchContacts = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/api/contact", { withCredentials: true });
-        setContacts(response.data);
-      } catch (error) {
-        console.log("문의글 가져오기 실패: ", error);
-      }
-    };
-    fetchContacts();
+    axios
+      .get("http://localhost:3000/api/contact", { withCredentials: true })
+      .then((res) => setContacts(res.data))
+      .catch((err) => console.error("문의글 가져오기 실패: ", err));
   }, []);
 
   const handleEdit = (contact) => {
-    setSelectContact(contact);
+    setSelectedContact(contact);
     setIsModalOpen(true);
   };
 
   const handleStatusUpdate = async (newStatus) => {
     try {
-      await axios.put(
-        `http://localhost:3000/api/contact/${selectedContact._id}`,
-        { status: newStatus },
-        { withCredentials: true }
+      await axios.put(`http://localhost:3000/api/contact/${selectedContact._id}`, { status: newStatus }, { withCredentials: true });
+      setContacts((prev) =>
+        prev.map((c) => (c._id === selectedContact._id ? { ...c, status: newStatus } : c))
       );
-      setContacts(contacts.map((contact) =>
-        contact._id === selectedContact._id ? { ...contact, status: newStatus } : contact
-      ));
       setIsModalOpen(false);
-      Swal.fire("수정완료!", "상태가 성공적으로 수정되었습니다.", "success");
-    } catch (error) {
-      console.log("수정 실패: ", error);
-      Swal.fire("오류 발생", "수정 중 문제가 발생했습니다.", "error");
+      Swal.fire("수정 완료", "상태가 변경되었습니다.", "success");
+    } catch (err) {
+      Swal.fire("오류 발생", "상태 변경 중 문제가 발생했습니다.", "error");
     }
   };
 
   const handleDelete = async (id) => {
     const result = await Swal.fire({
       title: "삭제하시겠습니까?",
-      text: "이 작업은 되돌릴 수 없습니다!",
+      text: "삭제 후 복구할 수 없습니다.",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
       confirmButtonText: "삭제",
       cancelButtonText: "취소",
     });
@@ -62,20 +60,19 @@ const AdminContacts = () => {
     if (result.isConfirmed) {
       try {
         await axios.delete(`http://localhost:3000/api/contact/${id}`, { withCredentials: true });
-        setContacts(contacts.filter(contact => contact._id !== id));
-        Swal.fire("삭제완료!", "문의가 성공적으로 삭제되었습니다.", "success");
-      } catch (error) {
-        console.log("삭제 실패: ", error);
+        setContacts((prev) => prev.filter((c) => c._id !== id));
+        Swal.fire("삭제 완료", "성공적으로 삭제되었습니다.", "success");
+      } catch (err) {
         Swal.fire("오류 발생", "삭제 중 문제가 발생했습니다.", "error");
       }
     }
   };
 
   const filteredContacts = useMemo(() => {
-    return contacts.filter((contact) => {
-      const value = (contact[searchType] || "").toLowerCase();
+    return contacts.filter((c) => {
+      const value = (c[searchType] || "").toLowerCase();
       const matchesSearch = value.includes(searchTerm.toLowerCase());
-      const matchesStatus = statusFilter === "all" || contact.status === statusFilter;
+      const matchesStatus = statusFilter === "all" || c.status === statusFilter;
       return matchesSearch && matchesStatus;
     });
   }, [contacts, searchTerm, searchType, statusFilter]);
@@ -87,150 +84,127 @@ const AdminContacts = () => {
   }, [filteredContacts, currentPage, pageSize]);
 
   return (
-    <div className="p-4 mx-auto max-w-[1400px]">
-      <h1 className="text-4xl font-bold mt-6 mb-4">제품 문의 관리</h1>
+    <div className="p-4 mx-auto max-w-7xl">
+      <h1 className="text-3xl sm:text-4xl font-bold mt-6 mb-4">제품 문의 관리</h1>
 
-      {contacts.length === 0 ? (
-        <div className="text-center py-8 bg-white rounded-lg shadow">
-          <p className="text-2xl font-bold text-gray-800">문의사항이 없습니다.</p>
+      {/* 검색 및 필터 */}
+      <div className="mb-6 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
+        <div className="flex flex-wrap gap-2 w-full md:w-auto">
+          <select className="border px-3 py-2 rounded" value={searchType} onChange={(e) => setSearchType(e.target.value)}>
+            <option value="name">이름</option>
+            <option value="email">이메일</option>
+            <option value="phone">전화번호</option>
+            <option value="region">지역</option>
+            <option value="inquiryType">문의분야</option>
+            <option value="message">문의내용</option>
+          </select>
+          <input type="text" className="border px-3 py-2 rounded flex-1 min-w-[150px]" placeholder="검색어" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+          <select className="border px-3 py-2 rounded" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
+            <option value="all">전체</option>
+            <option value="pending">대기중</option>
+            <option value="in progress">진행중</option>
+            <option value="completed">완료</option>
+          </select>
         </div>
-      ) : (
-        <>
-          {/* 검색 필터 */}
-          <div className="mb-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex w-full md:w-auto gap-2">
-              <select className="border rounded px-3 py-2 text-base" value={searchType} onChange={(e) => setSearchType(e.target.value)}>
-                <option value="name">이름</option>
-                <option value="email">이메일</option>
-                <option value="phone">전화번호</option>
-                <option value="region">지역</option>
-                <option value="inquiryType">문의분야</option>
-                <option value="message">문의내용</option>
-              </select>
-              <div className="flex-1 md:w-80">
-                <input type="text" placeholder="검색어를 입력하세요" className="w-full border rounded px-3 py-2 text-base"
-                  value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-              </div>
-              <select className="border rounded px-3 py-2 text-base" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
-                <option value="all">전체 상태</option>
-                <option value="pending">대기중</option>
-                <option value="in progress">진행중</option>
-                <option value="completed">완료</option>
-              </select>
-            </div>
+        <div className="flex items-center gap-2">
+          <span className="font-medium text-gray-600">표시 수:</span>
+          <select className="border px-2 py-1 rounded" value={pageSize} onChange={(e) => { setPageSize(Number(e.target.value)); setCurrentPage(1); }}>
+            {[10, 25, 50, 100].map((s) => <option key={s} value={s}>{s}개</option>)}
+          </select>
+        </div>
+      </div>
 
-            <div className="flex items-center space-x-2">
-              <label className="text-base font-bold text-gray-600">페이지당 표시: </label>
-              <select className="border rounded px-3 py-2" value={pageSize} onChange={(e) => {
-                setPageSize(Number(e.target.value));
-                setCurrentPage(1);
-              }}>
-                {[10, 25, 50, 100].map((size) => (
-                  <option key={size} value={size}>{`${size}개`}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* PC 테이블 */}
-          <div className="hidden md:block overflow-x-auto">
-            <table className="w-full bg-white shadow-md rounded-lg overflow-hidden text-sm">
-              <thead className="bg-gray-100 text-base">
-                <tr>
-                  <th className="px-3 py-2">번호</th>
-                  <th className="px-3 py-2">이름</th>
-                  <th className="px-3 py-2">이메일</th>
-                  <th className="px-3 py-2">전화번호</th>
-                  <th className="px-3 py-2">지역</th>
-                  <th className="px-3 py-2">문의분야</th>
-                  <th className="px-3 py-2">문의내용</th>
-                  <th className="px-3 py-2">상태</th>
-                  <th className="px-3 py-2 text-center">관리</th>
-                </tr>
-              </thead>
-              <tbody>
-                {paginatedContacts.map((contact, index) => (
-                  <tr key={contact._id} className="border-b hover:bg-gray-50">
-                    <td className="px-3 py-2">{(currentPage - 1) * pageSize + index + 1}</td>
-                    <td className="px-3 py-2">{contact.name}</td>
-                    <td className="px-3 py-2">{contact.email}</td>
-                    <td className="px-3 py-2">{contact.phone}</td>
-                    <td className="px-3 py-2">{contact.region || "-"}</td>
-                    <td className="px-3 py-2">{contact.inquiryType || "-"}</td>
-                    <td className="px-3 py-2">{contact.message}</td>
-                    <td className="px-3 py-2">
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        contact.status === "pending" ? "bg-blue-100 text-blue-800"
-                        : contact.status === "in progress" ? "bg-yellow-100 text-yellow-800"
-                        : "bg-green-100 text-green-800"
-                      }`}>
-                        {contact.status === "in progress" ? "진행중" : contact.status === "pending" ? "대기중" : "완료"}
-                      </span>
-                    </td>
-                    <td className="px-3 py-2 text-center">
-                      <button onClick={() => handleEdit(contact)} className="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 mr-1">수정</button>
-                      <button onClick={() => handleDelete(contact._id)} className="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600">삭제</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* 모바일 카드형 */}
-          <div className="md:hidden grid grid-cols-1 gap-4 mt-4">
-            {paginatedContacts.map((contact, index) => (
-              <div key={contact._id} className="p-4 bg-white rounded-lg shadow-md text-base">
-                <div className="font-bold">
-                  #{(currentPage - 1) * pageSize + index + 1}
-                </div>
-                <div>이름: {contact.name}</div>
-                <div>이메일: {contact.email}</div>
-                <div>전화번호: {contact.phone}</div>
-                <div>지역: {contact.region || "-"}</div>
-                <div>문의분야: {contact.inquiryType || "-"}</div>
-                <div>문의내용: {contact.message}</div>
-                <div className="mt-2 flex gap-2 justify-end">
-                  <button onClick={() => handleEdit(contact)} className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">수정</button>
-                  <button onClick={() => handleDelete(contact._id)} className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">삭제</button>
-                </div>
-              </div>
+      {/* 📋 PC 테이블 */}
+      <div className="hidden md:block overflow-x-auto">
+        <table className="w-full text-sm bg-white shadow rounded-lg">
+          <thead className="bg-gray-50 text-gray-700 font-semibold">
+            <tr>
+              <th className="p-3">번호</th>
+              <th className="p-3">이름</th>
+              <th className="p-3">이메일</th>
+              <th className="p-3">전화번호</th>
+              <th className="p-3">지역</th>
+              <th className="p-3">문의분야</th>
+              <th className="p-3">문의내용</th>
+              <th className="p-3">상태</th>
+              <th className="p-3 text-center">관리</th>
+            </tr>
+          </thead>
+          <tbody>
+            {paginatedContacts.map((contact, i) => (
+              <motion.tr key={contact._id} className="border-t hover:bg-gray-50" custom={i} initial="hidden" animate="visible" variants={fadeIn}>
+                <td className="p-3 text-center">{(currentPage - 1) * pageSize + i + 1}</td>
+                <td className="p-3">{contact.name}</td>
+                <td className="p-3">{contact.email}</td>
+                <td className="p-3">{contact.phone}</td>
+                <td className="p-3">{contact.region}</td>
+                <td className="p-3">{contact.inquiryType}</td>
+                <td className="p-3">{contact.message}</td>
+                <td className="p-3">
+                  <span className={`px-2 py-1 text-xs rounded-full ${
+                    contact.status === "pending" ? "bg-blue-100 text-blue-700" :
+                    contact.status === "in progress" ? "bg-yellow-100 text-yellow-700" :
+                    "bg-green-100 text-green-700"
+                  }`}>
+                    {contact.status === "pending" ? "대기중" : contact.status === "in progress" ? "진행중" : "완료"}
+                  </span>
+                </td>
+                <td className="p-3 text-center space-x-1">
+                  <button onClick={() => handleEdit(contact)} className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600">수정</button>
+                  <button onClick={() => handleDelete(contact._id)} className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">삭제</button>
+                </td>
+              </motion.tr>
             ))}
-          </div>
+          </tbody>
+        </table>
+      </div>
 
-          {/* 페이지네이션 */}
-          <div className="mt-4 flex justify-center space-x-2 text-lg font-bold">
-            <button className="px-3 py-1 rounded border disabled:opacity-50"
-              onClick={() => setCurrentPage((p) => p - 1)} disabled={currentPage === 1}>이전</button>
-            <span className="px-3 py-1">{currentPage} / {totalPages}</span>
-            <button className="px-3 py-1 rounded border disabled:opacity-50"
-              onClick={() => setCurrentPage((p) => p + 1)} disabled={currentPage === totalPages}>다음</button>
-          </div>
-        </>
-      )}
+      {/* 📱 모바일 카드 */}
+      <div className="md:hidden grid grid-cols-1 gap-4 mt-6">
+        {paginatedContacts.map((contact, i) => (
+          <motion.div key={contact._id} className="bg-white rounded-lg shadow p-4" initial="hidden" animate="visible" custom={i} variants={fadeIn}>
+            <div className="font-semibold text-lg">#{(currentPage - 1) * pageSize + i + 1}</div>
+            <div>이름: {contact.name}</div>
+            <div>이메일: {contact.email}</div>
+            <div>전화번호: {contact.phone}</div>
+            <div>문의내용: {contact.message}</div>
+            <div className="mt-2 flex justify-end gap-2">
+              <button onClick={() => handleEdit(contact)} className="bg-blue-500 text-white px-3 py-1 rounded">수정</button>
+              <button onClick={() => handleDelete(contact._id)} className="bg-red-500 text-white px-3 py-1 rounded">삭제</button>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
-      {/* 상태 수정 모달 */}
-      {isModalOpen && selectedContact && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-md">
-            <h2 className="text-xl font-bold mb-4">문의 상태 수정</h2>
-            <div className="mb-4">
-              <p className="font-medium mb-2">
-                현재 상태: {selectedContact.status === "in progress" ? "진행중" :
-                selectedContact.status === "pending" ? "대기중" : "완료"}
-              </p>
+      {/* 페이지네이션 */}
+      <div className="mt-6 flex justify-center items-center gap-4 text-sm font-semibold">
+        <button disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)} className="px-3 py-1 border rounded hover:bg-gray-100 disabled:opacity-50">이전</button>
+        <span>{currentPage} / {totalPages}</span>
+        <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(p => p + 1)} className="px-3 py-1 border rounded hover:bg-gray-100 disabled:opacity-50">다음</button>
+      </div>
+
+      {/* 모달 */}
+      <AnimatePresence>
+        {isModalOpen && selectedContact && (
+          <motion.div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <motion.div className="bg-white rounded-xl p-6 w-full max-w-md" initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.8 }}>
+              <h2 className="text-xl font-bold mb-4">문의 상태 변경</h2>
               <div className="space-y-2">
-                <button onClick={() => handleStatusUpdate("pending")} className="w-full px-4 py-2 bg-blue-100 text-blue-800 rounded hover:bg-blue-200">대기중</button>
-                <button onClick={() => handleStatusUpdate("in progress")} className="w-full px-4 py-2 bg-yellow-100 text-yellow-800 rounded hover:bg-yellow-200">진행중</button>
-                <button onClick={() => handleStatusUpdate("completed")} className="w-full px-4 py-2 bg-green-100 text-green-800 rounded hover:bg-green-200">완료</button>
+                {["pending", "in progress", "completed"].map((status) => (
+                  <button key={status} onClick={() => handleStatusUpdate(status)} className={`w-full px-4 py-2 rounded text-sm font-semibold ${
+                    status === "pending" ? "bg-blue-100 text-blue-800 hover:bg-blue-200" :
+                    status === "in progress" ? "bg-yellow-100 text-yellow-800 hover:bg-yellow-200" :
+                    "bg-green-100 text-green-800 hover:bg-green-200"
+                  }`}>
+                    {status === "pending" ? "대기중" : status === "in progress" ? "진행중" : "완료"}
+                  </button>
+                ))}
               </div>
-            </div>
-            <div className="flex justify-end">
-              <button onClick={() => setIsModalOpen(false)} className="w-full px-4 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200">취소</button>
-            </div>
-          </div>
-        </div>
-      )}
+              <button onClick={() => setIsModalOpen(false)} className="mt-4 w-full px-4 py-2 bg-gray-100 text-gray-800 rounded hover:bg-gray-200">취소</button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
