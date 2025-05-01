@@ -1,0 +1,179 @@
+{
+  "ko": {
+    "title": "제품 소개",
+    "subtitle": "혁신과 성장을 이끄는 iRDA Company의 AI비전 제품 포트폴리오",
+    "intro": [
+      "iRDA Company는 20년 이상의 반도체 & 광학 산업 경력을 바탕으로, 혁신적인 AI기술과 서비스를 통해 고객 여러분께 최상의 가치를 제공하기 위해 정성을 다해 노력하고 있습니다.",
+      "급변하는 글로벌 시장 환경 속에서도 지속적인 연구개발과 품질 혁신을 통해 세계 최고 수준의 제품과 서비스를 제공하겠습니다.",
+      "iRDA Company 임직원 드림"
+    ],
+    "product": {
+      "title": "AI Vision Machine System",
+      "subtitle": "Roll to Roll & Deep-Learning"
+    },
+    "applicationTitle": "응용 분야",
+    "coreTechTitle": "핵심 기술",
+    "applications": [
+      {
+        "name": "로보틱스 & 팩토리",
+        "position": "AI 공정 자동화",
+        "description": ["▷ 제품 품질 검사", "▷ 제품 인식 추적", "▷ 스마트 팩토리"]
+      },
+      {
+        "name": "추적 관리",
+        "position": "CCTV & 자율주행, 운동, 생체인식",
+        "description": ["▷ 실시간 객체 추적관리", "▷ 얼굴/지문 인식 인증체계", "▷ ADAS/자율주행"]
+      },
+      {
+        "name": "AI 광고",
+        "position": "패션, 미용, 화장품, 운동, 도소매",
+        "description": ["▷ 고객 행동분석 추천시스템", "▷ 무인 점포", "▷ 스마트보드 캐스팅"]
+      },
+      {
+        "name": "생성형 AI",
+        "position": "GEN-AI, GAN-AI, LLM, XR",
+        "description": ["▷ 콘텐츠 생성 에이전트", "▷ 가상 메이크업", "▷ 멘토링 분야"]
+      }
+    ],
+    "technologies": [
+      {
+        "name": "AI머신 비전카메라",
+        "position": "AI기반 실시간 객체탐지 & 분류",
+        "description": ["▷ AI에이전트 기반 자동의사결정", "▷ 클라우드 & 엣지 지원", "▷ 스마트 물류 & 산업 자동화"]
+      },
+      {
+        "name": "AI 가속기",
+        "position": "GPU, TPU, FPGA, EDGE, Etc",
+        "description": ["▷ AI기반 고성능 프로세싱", "▷ 풍부한 I/O 및 확장성", "▷ AI 및 로봇용 가속 라이브러리 지원"]
+      },
+      {
+        "name": "VAL 모델",
+        "position": "Vision-Language-Action",
+        "description": ["▷ 컴퓨터 비전", "▷ NLP 이해 및 행동, 예측", "▷ 멀티모달 AI"]
+      },
+      {
+        "name": "E-커머스 AI",
+        "position": "상품추천, 고객응대, 마케팅 자동화",
+        "description": ["▷ AI기반 개인화 마케팅", "▷ AI챗봇 및 음성비서", "▷ AI자동화 가격 및 물류최적화"]
+      }
+    ]
+  },
+  "en": {
+    "title": "Product Introduction",
+    "subtitle": "AI Vision Product Portfolio Leading Innovation and Growth by iRDA Company",
+    "intro": [
+      "With over 20 years of experience in semiconductor and optics, iRDA Company is committed to delivering the highest value to customers through innovative AI technologies and services.",
+      "Amid rapidly changing global markets, we will continue to provide world-class products and services through ongoing R&D and quality innovation.",
+      "Sincerely, iRDA Company Team"
+    ],
+    "product": {
+      "title": "AI Vision Machine System",
+      "subtitle": "Roll to Roll & Deep-Learning"
+    },
+    "applicationTitle": "Applications",
+    "coreTechTitle": "Core Technologies",
+    "applications": [
+      {
+        "name": "Robotics & Factory",
+        "position": "AI Process Automation",
+        "description": ["▷ Product Quality Inspection", "▷ Product Tracking", "▷ Smart Factory"]
+      },
+      {
+        "name": "Tracking Management",
+        "position": "CCTV, Autonomous Driving, Motion, Biometrics",
+        "description": ["▷ Real-time Object Tracking", "▷ Face/Fingerprint Authentication", "▷ ADAS/Autonomous Driving"]
+      },
+      {
+        "name": "AI Advertisement",
+        "position": "Fashion, Beauty, Cosmetics, Retail",
+        "description": ["▷ Customer Behavior Analytics & Recommendation", "▷ Unmanned Stores", "▷ Smartboard Casting"]
+      },
+      {
+        "name": "Generative AI",
+        "position": "GEN-AI, GAN-AI, LLM, XR",
+        "description": ["▷ Content Creation Agents", "▷ Virtual Makeup", "▷ Mentoring Applications"]
+      }
+    ],
+    "technologies": [
+      {
+        "name": "AI Vision Camera",
+        "position": "Real-time Object Detection & Classification",
+        "description": ["▷ Autonomous Decision Making with AI Agents", "▷ Supports Cloud & Edge", "▷ Smart Logistics & Industrial Automation"]
+      },
+      {
+        "name": "AI Accelerator",
+        "position": "GPU, TPU, FPGA, EDGE, Etc",
+        "description": ["▷ High-Performance AI Processing", "▷ Rich I/O & Scalability", "▷ Accelerated Libraries for AI & Robots"]
+      },
+      {
+        "name": "VAL Model",
+        "position": "Vision-Language-Action",
+        "description": ["▷ Computer Vision", "▷ NLP Understanding & Behavior Prediction", "▷ Multimodal AI"]
+      },
+      {
+        "name": "E-Commerce AI",
+        "position": "Product Recommendation, Customer Service, Marketing Automation",
+        "description": ["▷ Personalized Marketing", "▷ AI Chatbot & Voice Assistant", "▷ AI-based Price & Logistics Optimization"]
+      }
+    ]
+  },
+  "zh": {
+    "title": "产品介绍",
+    "subtitle": "iRDA Company 推出的引领创新与成长的 AI视觉产品组合",
+    "intro": [
+      "iRDA 公司拥有超过20年的半导体与光学行业经验，致力于通过创新的AI技术与服务为客户提供最佳价值。",
+      "在瞬息万变的全球市场环境中，我们将持续投入研发和品质创新，提供世界一流的产品与服务。",
+      "iRDA 公司 全体员工敬上"
+    ],
+    "product": {
+      "title": "AI视觉机器系统",
+      "subtitle": "卷对卷 & 深度学习"
+    },
+    "applicationTitle": "应用领域",
+    "coreTechTitle": "核心技术",
+    "applications": [
+      {
+        "name": "机器人与工厂",
+        "position": "AI流程自动化",
+        "description": ["▷ 产品质量检测", "▷ 产品追踪识别", "▷ 智能工厂"]
+      },
+      {
+        "name": "追踪管理",
+        "position": "监控、自主驾驶、运动、生物识别",
+        "description": ["▷ 实时目标追踪管理", "▷ 面部/指纹识别认证", "▷ ADAS/自动驾驶"]
+      },
+      {
+        "name": "AI广告",
+        "position": "时尚、美容、化妆品、零售",
+        "description": ["▷ 客户行为分析推荐系统", "▷ 无人商店", "▷ 智能广告牌投放"]
+      },
+      {
+        "name": "生成式AI",
+        "position": "GEN-AI, GAN-AI, LLM, XR",
+        "description": ["▷ 内容生成代理", "▷ 虚拟化妆", "▷ 指导与咨询"]
+      }
+    ],
+    "technologies": [
+      {
+        "name": "AI视觉相机",
+        "position": "基于AI的实时目标识别与分类",
+        "description": ["▷ 基于AI代理的自动决策", "▷ 支持云端与边缘部署", "▷ 智能物流与工业自动化"]
+      },
+      {
+        "name": "AI加速器",
+        "position": "GPU、TPU、FPGA、EDGE等",
+        "description": ["▷ AI高性能处理", "▷ 丰富的I/O与扩展性", "▷ 支持AI与机器人加速库"]
+      },
+      {
+        "name": "VAL模型",
+        "position": "视觉-语言-行动",
+        "description": ["▷ 计算机视觉", "▷ NLP理解与行为预测", "▷ 多模态AI"]
+      },
+      {
+        "name": "电商AI",
+        "position": "商品推荐、客户应答、营销自动化",
+        "description": ["▷ 基于AI的个性化营销", "▷ AI聊天机器人与语音助手", "▷ AI自动定价与物流优化"]
+      }
+    ]
+  }
+}

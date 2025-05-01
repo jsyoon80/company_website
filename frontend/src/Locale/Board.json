@@ -1,14 +1,14 @@
 {
   "ko": {
     "board": {
-      "title": "업무 게시판",
+      "title": "자주 묻는 질문",
       "search": {
-        "title": "제목",
+        "type": "제목",
         "placeholder": "검색어를 입력하세요",
-        "dateStart": "작성일 시작:",
-        "dateEnd": "작성일 끝:",
-        "itemsPerPage": "페이지당 표시:",
-        "itemsCount": "개"
+        "startDate": "작성일 시작:",
+        "endDate": "작성일 끝:",
+        "pageSize": "페이지당 표시",
+        "noPosts": "게시글이 없습니다."
       },
       "table": {
         "number": "번호",
@@ -20,19 +20,22 @@
         "prev": "이전",
         "next": "다음"
       },
-      "noPosts": "게시글이 없습니다."
+      "card": {
+        "date": "작성일",
+        "views": "조회수"
+      }
     }
   },
   "en": {
     "board": {
-      "title": "Work Board",
+      "title": "Frequently Asked Questions",
       "search": {
-        "title": "Title",
+        "type": "Title",
         "placeholder": "Enter search term",
-        "dateStart": "Start Date:",
-        "dateEnd": "End Date:",
-        "itemsPerPage": "Items per page:",
-        "itemsCount": "items"
+        "startDate": "Start Date:",
+        "endDate": "End Date:",
+        "pageSize": "Items per page",
+        "noPosts": "No posts available."
       },
       "table": {
         "number": "No.",
@@ -44,7 +47,37 @@
         "prev": "Previous",
         "next": "Next"
       },
-      "noPosts": "No posts available."
+      "card": {
+        "date": "Date",
+        "views": "Views"
+      }
+    }
+  },
+  "zh": {
+    "board": {
+      "title": "常见问题",
+      "search": {
+        "type": "标题",
+        "placeholder": "请输入搜索内容",
+        "startDate": "起始日期：",
+        "endDate": "结束日期：",
+        "pageSize": "每页显示",
+        "noPosts": "暂无帖子。"
+      },
+      "table": {
+        "number": "编号",
+        "title": "标题",
+        "date": "日期",
+        "views": "浏览量"
+      },
+      "pagination": {
+        "prev": "上一页",
+        "next": "下一页"
+      },
+      "card": {
+        "date": "日期",
+        "views": "浏览量"
+      }
     }
   }
 }

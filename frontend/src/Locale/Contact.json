@@ -1,83 +1,166 @@
 {
   "ko": {
     "contact": {
-      "title": "문의하기",
-      "subtitle": "태양광 설비 설치부터 유지보수까지, 전문가와 상담하세요. 24시간 내에 답변드리겠습니다.",
+      "title": "제품 문의",
+      "subtitle": "정성을 다해 답변을 해드리겠습니다.\nAI비전 에이전트 솔루션 개발부터, 설치와 유지보수까지, 전문가와 상담하세요.",
       "form": {
         "name": "이름",
         "email": "이메일",
         "phone": "전화번호",
+        "region": "지역",
+        "inquiryType": "문의분야",
+        "inquiryOptions": {
+          "default": "문의분야를 선택하세요",
+          "service": "서비스문의",
+          "purchase": "구매문의"
+        },
         "message": "문의 내용",
-        "submit": "문의하기",
-        "placeholders": {
+        "placeholder": {
           "name": "홍길동",
           "email": "example@example.com",
           "phone": "010-1234-5678",
-          "message": "문의하실 내용을 자세히 적어주세요."
+          "region": "서울특별시 강남구",
+          "message": "문의하실 내용을 적어주세요."
+        },
+        "agree": "개인정보 수집 및 이용에 동의합니다.",
+        "viewPolicy": "개인정보 처리방침 보기",
+        "policyHtml": "<p>iRDA(이하 &quot;회사&quot;)는 「개인정보보호법」을 준수하고 있으며...</p><p>01. 개인정보의 처리 목적: 고객문의, 채용, 투자문의 대응 등</p><p>02. 수집 항목: 이름, 이메일, 연락처, 지역, 문의내용</p><p>03. 보유기간: 문의 접수 후 1년</p><p>04. 제3자 제공 및 위탁 없음</p><p>05. 파기절차: 지체 없이 파기</p><p>※ 상세 내용은 홈페이지의 개인정보처리방침 참조</p>",
+        "submit": "작성 완료",
+        "alert": {
+          "requiredAgree": "개인정보 수집 및 이용에 동의해야 합니다.",
+          "success": "문의가 성공적으로 접수되었습니다.",
+          "error": "문의 접수 중 오류가 발생했습니다.",
+          "confirm": "확인"
         }
       },
-      "contact_info": {
+      "info": {
         "title": "연락처 정보",
         "phone": {
-          "title": "전화",
-          "info": "02-1234-5678",
+          "label": "전화",
+          "value": "02-2277-5700",
           "desc": "평일 09:00 - 18:00"
         },
         "email": {
-          "title": "이메일",
-          "info": "support@example.com",
+          "label": "이메일",
+          "value": "biz@irda-ai.com",
           "desc": "24시간 접수 가능"
         },
         "address": {
-          "title": "주소",
-          "info": "서울특별시 강남구 삼성동 123번지",
+          "label": "주소",
+          "value": "서울특별시 강남구 테헤란로 79길 6, JS타워",
           "desc": "본사"
-        }
-      },
-      "alerts": {
-        "success": "문의가 성공적으로 접수되었습니다.",
-        "error": "문의 접수 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요."
+        },
+        "map": "지도"
       }
     }
   },
   "en": {
     "contact": {
-      "title": "Contact Us",
-      "subtitle": "From solar installation to maintenance, consult with our experts. We'll respond within 24 hours.",
+      "title": "Product Inquiry",
+      "subtitle": "We will respond with utmost sincerity.\nConsult with our experts from AI vision solution development to installation and maintenance.",
       "form": {
         "name": "Name",
         "email": "Email",
         "phone": "Phone",
+        "region": "Region",
+        "inquiryType": "Inquiry Type",
+        "inquiryOptions": {
+          "default": "Please select an inquiry type",
+          "service": "Service Inquiry",
+          "purchase": "Purchase Inquiry"
+        },
         "message": "Message",
-        "submit": "Submit Inquiry",
-        "placeholders": {
+        "placeholder": {
           "name": "John Doe",
           "email": "example@example.com",
-          "phone": "010-1234-5678",
-          "message": "Please provide detailed information about your inquiry."
+          "phone": "+82-10-1234-5678",
+          "region": "Gangnam-gu, Seoul",
+          "message": "Please write your inquiry in detail."
+        },
+        "agree": "I agree to the collection and use of personal information.",
+        "viewPolicy": "View Privacy Policy",
+        "policyHtml": "<p>iRDA (the &quot;Company&quot;) complies with the Personal Information Protection Act...</p><p>01. Purpose of processing: customer, recruitment, and investment inquiries</p><p>02. Collected items: name, email, phone, region, message</p><p>03. Retention period: 1 year</p><p>04. No third-party sharing or outsourcing</p><p>05. Immediate destruction after retention</p><p>※ For details, see the privacy policy on our website</p>",
+        "submit": "Submit",
+        "alert": {
+          "requiredAgree": "You must agree to the collection and use of personal information.",
+          "success": "Your inquiry has been successfully submitted.",
+          "error": "An error occurred while submitting your inquiry.",
+          "confirm": "OK"
         }
       },
-      "contact_info": {
+      "info": {
         "title": "Contact Information",
         "phone": {
-          "title": "Phone",
-          "info": "02-1234-5678",
+          "label": "Phone",
+          "value": "+82-2-2277-5700",
           "desc": "Weekdays 09:00 - 18:00"
         },
         "email": {
-          "title": "Email",
-          "info": "support@example.com",
-          "desc": "24/7 Available"
+          "label": "Email",
+          "value": "biz@irda-ai.com",
+          "desc": "Available 24/7"
         },
         "address": {
-          "title": "Address",
-          "info": "123, Samsung-dong, Gangnam-gu, Seoul",
-          "desc": "Headquarters"
+          "label": "Address",
+          "value": "6, Teheran-ro 79-gil, Gangnam-gu, Seoul, JS Tower",
+          "desc": "Head Office"
+        },
+        "map": "Map"
+      }
+    }
+  },
+  "zh": {
+    "contact": {
+      "title": "产品咨询",
+      "subtitle": "我们将竭诚为您解答。\n请与我们的专家联系，从AI视觉解决方案开发到安装与维护，我们全程协助。",
+      "form": {
+        "name": "姓名",
+        "email": "邮箱",
+        "phone": "电话",
+        "region": "地区",
+        "inquiryType": "咨询类型",
+        "inquiryOptions": {
+          "default": "请选择咨询类型",
+          "service": "服务咨询",
+          "purchase": "购买咨询"
+        },
+        "message": "咨询内容",
+        "placeholder": {
+          "name": "张伟",
+          "email": "example@example.com",
+          "phone": "+82-10-1234-5678",
+          "region": "首尔江南区",
+          "message": "请详细填写您的咨询内容。"
+        },
+        "agree": "我同意收集和使用个人信息。",
+        "viewPolicy": "查看隐私政策",
+        "policyHtml": "<p>iRDA（以下简称“公司”）遵守《个人信息保护法》...</p><p>01. 处理目的：客户咨询、招聘、投资咨询</p><p>02. 收集信息：姓名、邮箱、电话、地区、内容</p><p>03. 保存期限：提交后1年</p><p>04. 不提供给第三方或委托</p><p>05. 保存期结束后立即销毁</p><p>※ 详细内容请参阅官网隐私政策</p>",
+        "submit": "提交",
+        "alert": {
+          "requiredAgree": "您必须同意收集和使用个人信息。",
+          "success": "您的咨询已成功提交。",
+          "error": "提交过程中发生错误。",
+          "confirm": "确认"
         }
       },
-      "alerts": {
-        "success": "Your inquiry has been successfully submitted.",
-        "error": "An error occurred while submitting your inquiry. Please try again later."
+      "info": {
+        "title": "联系方式",
+        "phone": {
+          "label": "电话",
+          "value": "+82-2-2277-5700",
+          "desc": "工作日 09:00 - 18:00"
+        },
+        "email": {
+          "label": "邮箱",
+          "value": "biz@irda-ai.com",
+          "desc": "支持24小时提交"
+        },
+        "address": {
+          "label": "地址",
+          "value": "首尔市江南区德黑兰路79街6号，JS大厦",
+          "desc": "总部"
+        },
+        "map": "地图"
       }
     }
   }

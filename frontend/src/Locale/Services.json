@@ -1,152 +1,146 @@
 {
   "ko": {
-    "services": {
-      "mainTitle": "우리의 서비스",
-      "subTitle": "혁신적인 기술로 비즈니스의 성공을 지원합니다.",
-      "list": [
-        {
-          "title": "맞춤형 소프트웨어 개발",
-          "description": "고객의 요구사항에 맞는 최적화된 솔루션을 제공합니다.",
-          "icon": "💻"
-        },
-        {
-          "title": "클라우드 서비스",
-          "description": "안정적이고 확장 가능한 클라우드 인프라 구축 및 관리",
-          "icon": "☁️"
-        },
-        {
-          "title": "보안 솔루션",
-          "description": "최신 보안 기술을 적용한 안전한 시스템 구축",
-          "icon": "🔒"
-        },
-        {
-          "title": "기술 컨설팅",
-          "description": "전문가의 분석을 통한 최적의 기술 전략 수립",
-          "icon": "📊"
-        }
-      ],
-      "whyUs": {
-        "title": "왜 우리를 선택해야 할까요?",
-        "reasons": [
-          {
-            "title": "10년+ 경험",
-            "description": "다양한 산업 분야의 프로젝트 경험"
-          },
-          {
-            "title": "전문가 팀",
-            "description": "숙련된 개발자와 컨설턴트로 구성"
-          },
-          {
-            "title": "24/7 지원",
-            "description": "연중무휴 기술 지원 서비스"
-          }
-        ]
+    "title": "기술 서비스",
+    "subtitle": "혁신적인 AI기술로 비즈니스의 성공을 지원합니다.",
+    "services": [
+      {
+        "title": "맞춤형 AI하드웨어 및 소프트웨어 개발",
+        "description": "고객의 요구사항에 맞는 최적화된 AI솔루션을 제공합니다.",
+        "icon": "💻"
       },
-      "process": {
-        "title": "프로젝트 진행 프로세스",
-        "steps": [
-          {
-            "step": "01",
-            "title": "요구사항 분석",
-            "desc": "고객의 니즈와 목표를 정확히 파악"
-          },
-          {
-            "step": "02",
-            "title": "설계 및 기획",
-            "desc": "최적의 솔루션 설계와 개발 계획 수립"
-          },
-          {
-            "step": "03",
-            "title": "개발 및 테스트",
-            "desc": "체계적인 개발과 품질 검증 진행"
-          },
-          {
-            "step": "04",
-            "title": "배포 및 유지보수",
-            "desc": "안정적인 서비스 운영과 지속적인 개선"
-          }
-        ]
+      {
+        "title": "응용 소프트웨어 솔루션 개발",
+        "description": "최신 AI 기술을 적용한 응용소프트웨어 구축",
+        "icon": "📲"
       },
-      "cta": {
-        "title": "프로젝트를 시작할 준비가 되셨나요?",
-        "subtitle": "전문가와 상담하고 최적의 솔루션을 찾아보세요.",
-        "button": "무료 상담 신청하기"
+      {
+        "title": "클라우드 서비스",
+        "description": "안정적이고 확장 가능한 클라우드 인프라 구축 및 관리",
+        "icon": "📤"
+      },
+      {
+        "title": "AI기술 컨설팅",
+        "description": "AI전문가의 분석을 통한 최적의 기술 전략 수립",
+        "icon": "🎥"
       }
+    ],
+    "whyUs": {
+      "title": "왜 우리를 선택해야 할까요?",
+      "reasons": [
+        { "title": "20년+ 경험", "desc": "다양한 산업 분야의 AI프로젝트 경험" },
+        { "title": "전문가 팀", "desc": "숙련된 개발자와 컨설턴트로 구성" },
+        { "title": "24/7 지원", "desc": "연중무휴 기술 지원 서비스" }
+      ]
+    },
+    "process": {
+      "title": "프로젝트 진행 프로세스",
+      "steps": [
+        { "step": "01", "title": "요구사항 분석", "desc": "고객의 니즈와 목표를 정확히 파악" },
+        { "step": "02", "title": "기획 및 설계", "desc": "최적 솔루션 설계와 개발 계획 수립" },
+        { "step": "03", "title": "개발 및 테스트", "desc": "체계적인 개발과 품질 검증 진행" },
+        { "step": "04", "title": "배포 및 설치,유지보수", "desc": "안정적인 서비스 운영과 지속적인 개선" }
+      ]
+    },
+    "cta": {
+      "title": "프로젝트를 시작할 준비가 되셨나요?",
+      "desc": "AI전문가와 상담하고 최적의 솔루션을 찾아보세요.",
+      "button": "무료 상담 신청하기"
     }
   },
   "en": {
-    "services": {
-      "mainTitle": "Our Services",
-      "subTitle": "Supporting business success with innovative technology.",
-      "list": [
-        {
-          "title": "Custom Software Development",
-          "description": "Providing optimized solutions tailored to customer requirements.",
-          "icon": "💻"
-        },
-        {
-          "title": "Cloud Services",
-          "description": "Building and managing stable and scalable cloud infrastructure",
-          "icon": "☁️"
-        },
-        {
-          "title": "Security Solutions",
-          "description": "Building secure systems with the latest security technology",
-          "icon": "🔒"
-        },
-        {
-          "title": "Technical Consulting",
-          "description": "Establishing optimal technical strategies through expert analysis",
-          "icon": "📊"
-        }
-      ],
-      "whyUs": {
-        "title": "Why Choose Us?",
-        "reasons": [
-          {
-            "title": "10+ Years Experience",
-            "description": "Project experience across various industries"
-          },
-          {
-            "title": "Expert Team",
-            "description": "Composed of skilled developers and consultants"
-          },
-          {
-            "title": "24/7 Support",
-            "description": "Round-the-clock technical support service"
-          }
-        ]
+    "title": "Technical Services",
+    "subtitle": "Empowering your business success with cutting-edge AI technology.",
+    "services": [
+      {
+        "title": "Custom AI Hardware and Software Development",
+        "description": "We provide optimized AI solutions tailored to your needs.",
+        "icon": "💻"
       },
-      "process": {
-        "title": "Project Process",
-        "steps": [
-          {
-            "step": "01",
-            "title": "Requirements Analysis",
-            "desc": "Accurately identifying customer needs and goals"
-          },
-          {
-            "step": "02",
-            "title": "Design & Planning",
-            "desc": "Establishing optimal solution design and development plans"
-          },
-          {
-            "step": "03",
-            "title": "Development & Testing",
-            "desc": "Systematic development and quality verification"
-          },
-          {
-            "step": "04",
-            "title": "Deployment & Maintenance",
-            "desc": "Stable service operation and continuous improvement"
-          }
-        ]
+      {
+        "title": "Application Software Development",
+        "description": "Build AI-powered applications with the latest technologies.",
+        "icon": "📲"
       },
-      "cta": {
-        "title": "Ready to Start Your Project?",
-        "subtitle": "Consult with experts and find the optimal solution.",
-        "button": "Request Free Consultation"
+      {
+        "title": "Cloud Services",
+        "description": "Robust and scalable cloud infrastructure setup and management.",
+        "icon": "📤"
+      },
+      {
+        "title": "AI Technology Consulting",
+        "description": "Get strategic guidance from AI experts for your business.",
+        "icon": "🎥"
       }
+    ],
+    "whyUs": {
+      "title": "Why Choose Us?",
+      "reasons": [
+        { "title": "20+ Years Experience", "desc": "AI project experience across multiple industries" },
+        { "title": "Expert Team", "desc": "Skilled developers and consultants" },
+        { "title": "24/7 Support", "desc": "Year-round technical support service" }
+      ]
+    },
+    "process": {
+      "title": "Project Workflow",
+      "steps": [
+        { "step": "01", "title": "Requirement Analysis", "desc": "Understand client needs and goals" },
+        { "step": "02", "title": "Planning & Design", "desc": "Design and plan the optimal solution" },
+        { "step": "03", "title": "Development & Testing", "desc": "Structured development and quality assurance" },
+        { "step": "04", "title": "Deployment & Maintenance", "desc": "Stable operations and continuous improvement" }
+      ]
+    },
+    "cta": {
+      "title": "Ready to start your project?",
+      "desc": "Talk to our AI experts to find the best solution.",
+      "button": "Request Free Consultation"
+    }
+  },
+  "zh": {
+    "title": "技术服务",
+    "subtitle": "通过先进的AI技术助力您的商业成功。",
+    "services": [
+      {
+        "title": "定制AI软硬件开发",
+        "description": "提供针对客户需求的优化AI解决方案。",
+        "icon": "💻"
+      },
+      {
+        "title": "应用软件开发",
+        "description": "构建基于最新AI技术的应用程序。",
+        "icon": "📲"
+      },
+      {
+        "title": "云服务",
+        "description": "构建并管理稳定且可扩展的云基础设施。",
+        "icon": "📤"
+      },
+      {
+        "title": "AI技术咨询",
+        "description": "由AI专家提供最优技术策略建议。",
+        "icon": "🎥"
+      }
+    ],
+    "whyUs": {
+      "title": "为什么选择我们？",
+      "reasons": [
+        { "title": "20年以上经验", "desc": "涵盖多行业的AI项目经验" },
+        { "title": "专家团队", "desc": "由资深开发者与顾问组成" },
+        { "title": "全年技术支持", "desc": "全年无休技术服务" }
+      ]
+    },
+    "process": {
+      "title": "项目流程",
+      "steps": [
+        { "step": "01", "title": "需求分析", "desc": "准确了解客户需求与目标" },
+        { "step": "02", "title": "规划与设计", "desc": "制定最佳方案与开发计划" },
+        { "step": "03", "title": "开发与测试", "desc": "系统开发与质量验证" },
+        { "step": "04", "title": "部署与维护", "desc": "稳定运行与持续优化" }
+      ]
+    },
+    "cta": {
+      "title": "准备好开始项目了吗？",
+      "desc": "与AI专家沟通，寻找最合适的解决方案。",
+      "button": "申请免费咨询"
     }
   }
 }

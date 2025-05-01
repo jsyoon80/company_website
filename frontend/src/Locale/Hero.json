@@ -1,25 +1,25 @@
 {
   "ko": {
     "title": {
-      "main": "태양광 설비 전문가와 함께",
+      "main": "AI비전 에이전트 전문가와 함께",
       "highlight": "미래를 만들어갑니다."
     },
-    "description": "안전하고 효율적인 태양광 설비 설치부터 유지보수까지, 전문가들이 함께합니다.",
+    "description": "효율적인 AI비전 솔루션 개발부터 설치와 유지보수까지 전문가들이 함께합니다.",
     "buttons": {
-      "consult": "상담 신청하기",
-      "learnMore": "더 알아보기"
+      "consult": "제품 소개 바로가기",
+      "learnMore": "기술 지원 바로가기"
     },
     "stats": {
       "installations": {
-        "number": "1,200+",
+        "number": "28+",
         "label": "설치 완료"
       },
       "satisfaction": {
-        "number": "98%",
+        "number": "100%",
         "label": "고객 만족도"
       },
       "experience": {
-        "number": "15년+",
+        "number": "20년+",
         "label": "업계 경력"
       },
       "support": {
@@ -30,30 +30,59 @@
   },
   "en": {
     "title": {
-      "main": "Together with Solar Power Experts",
-      "highlight": "We Create the Future"
+      "main": "With AI Vision Agent Experts",
+      "highlight": "We Build the Future"
     },
-    "description": "From safe and efficient solar power installation to maintenance, our experts are with you.",
+    "description": "From efficient AI vision solution development to installation and maintenance, our experts are with you.",
     "buttons": {
-      "consult": "Get Consultation",
-      "learnMore": "Learn More"
+      "consult": "Go to Product Introduction",
+      "learnMore": "Go to Technical Support"
     },
     "stats": {
       "installations": {
-        "number": "1,200+",
-        "label": "Installations"
+        "number": "28+",
+        "label": "Installations Completed"
       },
       "satisfaction": {
-        "number": "98%",
-        "label": "Client Satisfaction"
+        "number": "100%",
+        "label": "Customer Satisfaction"
       },
       "experience": {
-        "number": "15+ Years",
+        "number": "20+ Years",
         "label": "Industry Experience"
       },
       "support": {
         "number": "24/7",
         "label": "Technical Support"
+      }
+    }
+  },
+  "zh": {
+    "title": {
+      "main": "与AI视觉专家携手",
+      "highlight": "共创未来"
+    },
+    "description": "从高效的AI视觉解决方案开发到安装与维护，我们的专家全程陪伴。",
+    "buttons": {
+      "consult": "前往产品介绍",
+      "learnMore": "前往技术支持"
+    },
+    "stats": {
+      "installations": {
+        "number": "28+",
+        "label": "安装完成"
+      },
+      "satisfaction": {
+        "number": "100%",
+        "label": "客户满意度"
+      },
+      "experience": {
+        "number": "20年+",
+        "label": "行业经验"
+      },
+      "support": {
+        "number": "24/7",
+        "label": "技术支持"
       }
     }
   }

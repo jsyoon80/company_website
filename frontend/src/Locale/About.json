@@ -1,5 +1,9 @@
 {
   "ko": {
+    "hero": {
+      "title": "iRDA Company",
+      "subtitle": "혁신과 신뢰로 AI비전 에이전트 글로벌 시장을 선도합니다."
+    },
     "title": "회사 소개",
     "subtitle": "혁신적인 AI기술 솔루션을 제공하는 글로벌 기업",
     "description": {
@@ -44,6 +48,10 @@
     }
   },
   "en": {
+    "hero": {
+      "title": "iRDA Company",
+      "subtitle": "Leading the global AI Vision Agent market with innovation and trust."
+    },
     "title": "About Us",
     "subtitle": "A Global Company Providing Innovative AI Technology Solutions",
     "description": {
@@ -88,6 +96,10 @@
     }
   },
   "zh": {
+    "hero": {
+      "title": "iRDA公司",
+      "subtitle": "以创新与信任引领AI视觉代理的全球市场。"
+    },
     "title": "公司简介",
     "subtitle": "提供创新AI技术解决方案的全球企业",
     "description": {

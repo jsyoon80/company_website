@@ -1,50 +1,74 @@
 {
   "ko": {
     "contact": {
-      "title": "문의하기",
+      "title": "문의 하기",
       "subtitle": "궁금하신 점이 있으신가요? 언제든 문의해주세요.",
       "contactMethods": {
         "phone": {
           "title": "전화 문의",
-          "info": "02-1234-5678",
+          "info": "02-2277-5700",
           "subInfo": "평일 09:00 - 18:00"
         },
         "email": {
           "title": "이메일 문의",
-          "info": "support@example.com",
+          "info": "biz@irda-ai.com",
           "subInfo": "24시간 접수 가능"
         },
         "location": {
           "title": "위치",
           "info": "서울특별시 강남구",
-          "subInfo": "삼성동 123번지"
+          "subInfo": "테헤란로 79길 6, JS타워"
         }
       },
-      "button": "문의하기"
+      "button": "문의 하기"
     }
   },
   "en": {
     "contact": {
       "title": "Contact Us",
-      "subtitle": "Have any questions? Feel free to contact us anytime.",
+      "subtitle": "Do you have any questions? Feel free to reach out anytime.",
       "contactMethods": {
         "phone": {
-          "title": "Phone",
-          "info": "02-1234-5678",
+          "title": "Phone Inquiry",
+          "info": "+82-2-2277-5700",
           "subInfo": "Weekdays 09:00 - 18:00"
         },
         "email": {
-          "title": "Email",
-          "info": "support@example.com",
+          "title": "Email Inquiry",
+          "info": "biz@irda-ai.com",
           "subInfo": "Available 24/7"
         },
         "location": {
           "title": "Location",
           "info": "Gangnam-gu, Seoul",
-          "subInfo": "123 Samsung-dong"
+          "subInfo": "6, Teheran-ro 79-gil, JS Tower"
         }
       },
       "button": "Contact Us"
+    }
+  },
+  "zh": {
+    "contact": {
+      "title": "联系我们",
+      "subtitle": "有任何问题吗？欢迎随时与我们联系。",
+      "contactMethods": {
+        "phone": {
+          "title": "电话咨询",
+          "info": "+82-2-2277-5700",
+          "subInfo": "工作日 09:00 - 18:00"
+        },
+        "email": {
+          "title": "邮箱咨询",
+          "info": "biz@irda-ai.com",
+          "subInfo": "全天24小时接受"
+        },
+        "location": {
+          "title": "地址",
+          "info": "首尔特别市 江南区",
+          "subInfo": "德黑兰路79街6号 JS大厦"
+        }
+      },
+      "button": "发送咨询"
     }
   }
 }
